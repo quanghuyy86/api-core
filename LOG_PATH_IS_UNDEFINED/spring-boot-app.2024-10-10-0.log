@@ -1,0 +1,209 @@
+2024-10-10 09:51:07,114 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 10:58:33,003 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 10:58:51,669 vn.vnpay.netty.NettyHandler    -         channelRead0:44   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 10:58:51,670 ervice.impl.PaymentServiceImpl -       createTokenKey:22   - INFO  - [] - tokenKey: 7EwNceUCZU_B8KnKQY_t24sjviw9uDoz 
+2024-10-10 11:06:56,268 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 11:07:06,629 vn.vnpay.netty.NettyHandler    -         channelRead0:44   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 11:07:06,631 ervice.impl.PaymentServiceImpl -       createTokenKey:22   - INFO  - [] - tokenKey: pB_5OnRFhpxBe2XJSTsevFRn3WSsWBdb 
+2024-10-10 15:59:37,411 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 15:59:39,754 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 15:59:39,755 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: PDS4pZkV9CUAWyaKo7d4aZC3ne6PkIe- 
+2024-10-10 16:09:28,349 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 16:09:34,854 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 16:09:34,855 ervice.impl.PaymentServiceImpl -       createTokenKey:28   - INFO  - [] - tokenKey: SSAoWmBfHFgTvbTYvZzSayCN0VD3Q04q 
+2024-10-10 16:52:11,235 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 16:52:17,228 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 16:52:17,230 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: gBS0ZLAv4xSnZ4wOxmacXgt4iNfcEyQF 
+2024-10-10 17:10:59,803 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 17:11:03,132 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:03,133 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: dZcaOl4MaodL-VIz4cu98QaHnlV6slvM 
+2024-10-10 17:11:05,273 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:05,274 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: uLmNnI__mwNc9PEGdyi4DcE0CZ6BKUwr 
+2024-10-10 17:11:07,274 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:07,275 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: ID9LCmXc1_1j4oWh_jYORwwf-5iDbkT8 
+2024-10-10 17:11:08,266 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:08,267 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: ECpaAjQH79ng0Evg9SgX2IrQk1FPlX5A 
+2024-10-10 17:11:09,146 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:09,147 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: SUuddqmaV5IkIEIdbAVA1s-2Nc5p5MJA 
+2024-10-10 17:11:10,009 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:10,010 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: XN83tPYsyC9OsiLRpEhtws4dmm0s9nVG 
+2024-10-10 17:11:10,820 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:10,821 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: 9EsgQUgHFrNDIRJA1e3hgWUcERF8XKqE 
+2024-10-10 17:11:11,609 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:11,610 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: CuaSgiLagszHcuqH1Fsu249FrP2jGVJy 
+2024-10-10 17:11:12,448 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:12,449 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: YDwsdK47Ib_Xoa9o9CgCvw1GEn0rTAnC 
+2024-10-10 17:11:13,227 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:13,229 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: ym6pKX-eE44VBITvoJnwBfmCJM22MPMQ 
+2024-10-10 17:11:14,003 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:14,004 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: kEj_1OwX4CIhMI0CZJ9hQXnxsEJBOH8H 
+2024-10-10 17:11:14,788 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:14,788 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: xe8VmCtt7CnGTcMPW6Ur3Pf0-_o7fnF1 
+2024-10-10 17:11:15,599 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:15,600 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: apmz7lLJ8NjQ8nQ2bWC6VrQe8FpD736V 
+2024-10-10 17:11:16,396 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:16,396 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: 9jkZyZy-XLb6KV8TdiTFubTxMGRtSwgj 
+2024-10-10 17:11:17,387 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:17,388 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: XiIhEMJ5tiNfsz_7MmPacCmNR7lF9V9J 
+2024-10-10 17:11:18,215 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:18,216 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: NHRsTKFT6A5EmDJp4ZUmXG-405Eh4ano 
+2024-10-10 17:11:19,025 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:19,025 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: tDtHlENF5acfkCE67G5MiRNscnyv6mJi 
+2024-10-10 17:11:19,835 vn.vnpay.netty.NettyHandler    -         channelRead0:34   - INFO  - [] - Received request: POST /payment/token-key
+2024-10-10 17:11:19,836 ervice.impl.PaymentServiceImpl -       createTokenKey:27   - INFO  - [] - tokenKey: 4AEfvIuoZncuTtfjP6YFD5rvAaHsEv80 
+2024-10-10 20:26:06,936 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 20:31:21,929 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 20:31:29,224 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: POST /payment
+2024-10-10 20:31:29,246 ervice.impl.PaymentServiceImpl -        createPayment:47   - INFO  - [] - Begin create payment: vn.vnpay.dto.payment.request.PaymentRequestDTO@3e7a405a
+2024-10-10 20:33:09,979 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 20:33:13,447 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 20:33:13,465 ervice.impl.PaymentServiceImpl -        createPayment:47   - INFO  - [] - Begin create payment: {
+  "tokenKey": "abc123",
+  "apiId": "apiIdExample",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:33:18,932 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-10 21:33:25,263 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 21:33:25,280 ervice.impl.PaymentServiceImpl -        createPayment:50   - INFO  - [] - Begin create payment: {
+  "tokenKey": "abc123",
+  "apiId": "apiIdExample",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:33:37,947 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 21:33:37,948 ervice.impl.PaymentServiceImpl -        createPayment:50   - INFO  - [] - Begin create payment: {
+  "tokenKey": "",
+  "apiId": "apiIdExample",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:33:37,974 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 6b4529fee0a66250ba3ffcaa84aeac7c4097e7b5f28b0e86334386a65b68b0ac
+2024-10-10 21:33:37,975 pay.common.util.FieldValidator - idateFieldAndRespond:26   - INFO  - [] - tokenKey: null or empty
+2024-10-10 21:33:53,737 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 21:33:53,738 ervice.impl.PaymentServiceImpl -        createPayment:50   - INFO  - [] - Begin create payment: {
+  "tokenKey": "abc123",
+  "apiId": "",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:33:53,738 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1d6931c32ed9a0a97f8679cc965f2e3d1a5e5f623f6e18ef904a2feaa56a2b6b
+2024-10-10 21:33:53,738 pay.common.util.FieldValidator - idateFieldAndRespond:26   - INFO  - [] - apiId: null or empty
+2024-10-10 21:34:00,289 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 21:34:00,291 ervice.impl.PaymentServiceImpl -        createPayment:50   - INFO  - [] - Begin create payment: {
+  "tokenKey": "abc123",
+  "apiId": "apiIdExample",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:34:10,060 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-10 21:34:10,062 ervice.impl.PaymentServiceImpl -        createPayment:50   - INFO  - [] - Begin create payment: {
+  "tokenKey": "abc123",
+  "apiId": "",
+  "mobile": "0123456789",
+  "bankCode": "BIDV",
+  "accountNo": "123456789",
+  "payDate": "2024-10-01",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-10 21:34:10,063 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: e574a29d39d1988ff9fa744638b68709df2cc7c60c5221411e8294466f85af2a
+2024-10-10 21:34:10,063 pay.common.util.FieldValidator - idateFieldAndRespond:26   - INFO  - [] - apiId: null or empty

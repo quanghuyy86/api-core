@@ -1,0 +1,80 @@
+2024-10-13 13:53:58,189 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-13 13:54:01,084 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-13 13:54:01,099 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
+  "tokenKey": "12341234",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "Payment",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-13 13:54:01,153 ervice.impl.PaymentServiceImpl -      validateRequest:131  - INFO  - [] - Giá trị của messageType không chính xác
+2024-10-13 13:54:01,191 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 5aeaab1d48c081720c5f2faa02c76353e40f65e7d2db7ee0c4d9722760f84ce2
+2024-10-13 13:54:20,570 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-13 13:54:20,571 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
+  "tokenKey": "12341234",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-13 13:54:20,576 ervice.impl.PaymentServiceImpl -      validateRequest:131  - INFO  - [] - messageType không được trống
+2024-10-13 13:54:20,579 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 4bcc0846fd8d2e95328a119c44e8ee9d5b806124ad433107b6e3357c231bed3b
+2024-10-13 13:54:29,584 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
+2024-10-13 13:54:29,585 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
+  "tokenKey": "12341234",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
