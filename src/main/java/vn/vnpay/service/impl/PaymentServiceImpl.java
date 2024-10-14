@@ -6,6 +6,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import vn.vnpay.common.enums.PaymentResponseCode;
 import vn.vnpay.common.exception.PaymentException;
 import vn.vnpay.common.response.BaseResponse;
@@ -14,14 +16,17 @@ import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.config.bankcode.Bank;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.config.gson.GsonConfig;
+import vn.vnpay.config.redis.RedisConfig;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 import vn.vnpay.enums.MessageType;
 import vn.vnpay.service.PaymentService;
 
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoUnit;
 import java.util.Base64;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -29,12 +34,18 @@ import java.util.regex.Pattern;
 
 @Slf4j
 public class PaymentServiceImpl implements PaymentService {
+    private final JedisPool jedisPool;
     private static final SecureRandom secureRandom = new SecureRandom();
     private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder();
     private final Gson gson = GsonConfig.getGson();
     private static final String PHONE_REGEX = "^(03|05|07|08|09)[0-9]{8}$";
     private static final String currentDirectory = System.getProperty("user.dir");
     private static final String PATH_BANK_CODE = currentDirectory + "/src/main/resources/bankcode.xml";
+
+    public PaymentServiceImpl(JedisPool jedisPool) {
+        this.jedisPool = jedisPool;
+
+    }
 
     @Override
     public void createTokenKey(ChannelHandlerContext ctx, HttpRequest request) {
@@ -75,6 +86,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     void validateRequest(ChannelHandlerContext ctx, PaymentRequestDTO request) {
         try {
+            //validate tokenKey
+            validateTokenKey(request);
+
             //validate mobile
             validatePhoneNumber(ctx, request);
 
@@ -141,6 +155,24 @@ public class PaymentServiceImpl implements PaymentService {
 
     }
 
+    private void validateTokenKey(PaymentRequestDTO request) throws PaymentException {
+        if (request.getTokenKey() == null || request.getTokenKey().isEmpty() || request.getTokenKey().isBlank()) {
+            throw new PaymentException("tokenKey không được để trống hoặc có khoảng trắng");
+        }
+        try (Jedis jedis = jedisPool.getResource()) {
+            if (jedis.exists(request.getTokenKey())) {
+                throw new PaymentException("tokenKey đã trùng lặp trong ngày");
+            }
+
+            long secondsUntilEndOfDay = getSecondsUntilMidnight();
+            log.info("TokenKey: {} expiration time: {} seconds", request.getTokenKey(), secondsUntilEndOfDay);
+
+            jedis.setex(request.getTokenKey(), secondsUntilEndOfDay, gson.toJson(request));
+        } catch (Exception e) {
+            throw new PaymentException("Lỗi khi tương tác với Redis: " + e.getMessage());
+        }
+    }
+
     private void validatePayDate(PaymentRequestDTO request) throws PaymentException {
         if (request.getPayDate() == null || request.getPayDate().isEmpty()) {
             throw new PaymentException("payDate không được trống");
@@ -204,4 +236,10 @@ public class PaymentServiceImpl implements PaymentService {
         }
     }
 
+    // Hàm tính số giây còn lại từ hiện tại đến 0h ngày hôm sau
+    private long getSecondsUntilMidnight() {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime midnight = now.toLocalDate().plusDays(1).atStartOfDay();
+        return ChronoUnit.SECONDS.between(now, midnight);
+    }
 }
