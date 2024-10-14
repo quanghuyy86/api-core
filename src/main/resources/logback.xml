@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%yellow(%d) %cyan(%-30.30c) - %green(%20.20M):%blue(%-4.4L) - %highlight(%-5.5level) - %magenta([%X{token}]) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender (Rolling) -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/spring-boot-app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- File sẽ tự động xoay vòng mỗi ngày hoặc khi file lớn hơn 30MB -->
+            <fileNamePattern>${LOG_PATH}/spring-boot-app.%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <!-- Kích thước tối đa cho mỗi file log -->
+            <maxFileSize>30MB</maxFileSize>
+            <!-- Giữ lại log trong 30 ngày -->
+            <maxHistory>30</maxHistory>
+            <!-- Số file log tối đa, có thể giữ lại -->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d %-30.30c - %20.20M:%-4.4L - %-5.5level - [%X{token}] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="INFO">
+        <!-- Log ra console -->
+        <appender-ref ref="CONSOLE"/>
+        <!-- Log ra file -->
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
