@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banks>
+    <bank>
+        <bankCode>01101014</bankCode>
+        <privateKey>09742344</privateKey>
+        <ips>
+            <ip>192.168.1.1</ip>
+            <ip>192.168.1.2</ip>
+        </ips>
+    </bank>
+    <bank>
+        <bankCode>79320001</bankCode>
+        <privateKey>08062002</privateKey>
+        <ips>
+            <ip>10.0.0.1</ip>
+            <ip>10.0.0.2</ip>
+        </ips>
+    </bank>
+    <bank>
+        <bankCode>01234567</bankCode>
+        <privateKey>12345678</privateKey>
+        <ips>
+            <ip>172.16.0.1</ip>
+            <ip>172.16.0.2</ip>
+        </ips>
+    </bank>
+    <bank>
+        <bankCode>98765432</bankCode>
+        <privateKey>87654321</privateKey>
+        <ips>
+            <ip>192.168.100.1</ip>
+            <ip>192.168.100.2</ip>
+        </ips>
+    </bank>
+    <bank>
+        <bankCode>24680135</bankCode>
+        <privateKey>13579024</privateKey>
+        <ips>
+            <ip>10.1.1.1</ip>
+            <ip>10.1.1.2</ip>
+        </ips>
+    </bank>
+</banks>
