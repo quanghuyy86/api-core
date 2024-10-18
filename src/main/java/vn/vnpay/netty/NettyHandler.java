@@ -1,17 +1,12 @@
 package vn.vnpay.netty;
 
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
-import io.netty.util.CharsetUtil;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import vn.vnpay.common.enums.PaymentResponseCode;
 import vn.vnpay.common.response.PaymentHttpResponse;
-import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 import vn.vnpay.enums.Route;
 import vn.vnpay.service.PaymentService;
 
@@ -42,10 +37,10 @@ public class NettyHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
             if (handler != null) {
                 handler.accept(ctx, request);
             } else {
-                ctx.writeAndFlush(PaymentHttpResponse.responseError(PaymentResponseCode.UNKNOWN_ERROR.getMessage(), HttpResponseStatus.NOT_FOUND)).addListener(ChannelFutureListener.CLOSE);
+                ctx.writeAndFlush(PaymentHttpResponse.errorResponseFail(PaymentResponseCode.UNKNOWN_ERROR.getMessage(), HttpResponseStatus.NOT_FOUND)).addListener(ChannelFutureListener.CLOSE);
             }
         } else {
-            ctx.writeAndFlush(PaymentHttpResponse.responseError("Method Not Allowed", HttpResponseStatus.METHOD_NOT_ALLOWED))
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseFail("Method Not Allowed", HttpResponseStatus.METHOD_NOT_ALLOWED))
                     .addListener(ChannelFutureListener.CLOSE);
         }
     }

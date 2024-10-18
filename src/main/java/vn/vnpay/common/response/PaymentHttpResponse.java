@@ -8,7 +8,7 @@ import io.netty.handler.codec.http.HttpVersion;
 import io.netty.util.CharsetUtil;
 
 public class PaymentHttpResponse {
-    public static FullHttpResponse responseSuccess(String jsonResponse){
+    public static FullHttpResponse errorResponseSuccess(String jsonResponse){
         FullHttpResponse response = new DefaultFullHttpResponse(
                 HttpVersion.HTTP_1_1,
                 HttpResponseStatus.OK,
@@ -18,7 +18,7 @@ public class PaymentHttpResponse {
         return response;
     }
 
-    public static FullHttpResponse responseError(String jsonResponse, HttpResponseStatus status) {
+    public static FullHttpResponse errorResponseFail(String jsonResponse, HttpResponseStatus status) {
         FullHttpResponse response = new DefaultFullHttpResponse(
                 HttpVersion.HTTP_1_1,
                 status,

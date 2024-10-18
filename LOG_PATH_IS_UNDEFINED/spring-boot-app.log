@@ -1,61 +1,7 @@
-2024-10-13 13:53:58,189 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
-2024-10-13 13:54:01,084 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
-2024-10-13 13:54:01,099 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
-  "tokenKey": "12341234",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "Payment",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-13 13:54:01,153 ervice.impl.PaymentServiceImpl -      validateRequest:131  - INFO  - [] - Giá trị của messageType không chính xác
-2024-10-13 13:54:01,191 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 5aeaab1d48c081720c5f2faa02c76353e40f65e7d2db7ee0c4d9722760f84ce2
-2024-10-13 13:54:20,570 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
-2024-10-13 13:54:20,571 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
-  "tokenKey": "12341234",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-13 13:54:20,576 ervice.impl.PaymentServiceImpl -      validateRequest:131  - INFO  - [] - messageType không được trống
-2024-10-13 13:54:20,579 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 4bcc0846fd8d2e95328a119c44e8ee9d5b806124ad433107b6e3357c231bed3b
-2024-10-13 13:54:29,584 vn.vnpay.netty.NettyHandler    -         channelRead0:36   - INFO  - [] - Received request: GET /payment
-2024-10-13 13:54:29,585 ervice.impl.PaymentServiceImpl -        createPayment:62   - INFO  - [] - Begin create payment: {
-  "tokenKey": "12341234",
+2024-10-17 08:31:33,650 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-17 08:32:07,596 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-17 08:32:07,612 ervice.impl.PaymentServiceImpl -        createPayment:72   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -78,3 +24,33 @@
     "payMethodMMS": 1
   }
 }
+2024-10-17 08:32:07,682 ervice.impl.PaymentServiceImpl -      validateRequest:156  - INFO  - [] - Failed to connect to localhost:6379.
+2024-10-17 08:32:07,716 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 4016ab9b10a2fc608e189e387a22af622207ed5d10d088d686ea3132fe094da3
+2024-10-17 08:32:07,755 ervice.impl.PaymentServiceImpl -  saveTokenKeyInRedis:187  - INFO  - [] - Failed to connect to localhost:6379.
+2024-10-17 08:32:07,756 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: e957265e5d75647887b9e67244987396e99869648ef80645482575b057323b10
+2024-10-17 08:32:53,542 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-17 08:32:53,544 ervice.impl.PaymentServiceImpl -        createPayment:72   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-17 08:32:53,622 ervice.impl.PaymentServiceImpl -  saveTokenKeyInRedis:184  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV expiration time:  55626 seconds
