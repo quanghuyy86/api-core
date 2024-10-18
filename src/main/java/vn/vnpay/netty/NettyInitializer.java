@@ -21,7 +21,8 @@ public class NettyInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new HttpObjectAggregator(65536));
         pipeline.addLast(new ChunkedWriteHandler());
 
-        JedisPool jedisPool = new JedisPool();
+        RedisConfig redisConfig = new RedisConfig();
+        JedisPool jedisPool = redisConfig.getJedisPool();
         PaymentService paymentService = new PaymentServiceImpl(jedisPool);
         pipeline.addLast(new NettyHandler(paymentService));
     }

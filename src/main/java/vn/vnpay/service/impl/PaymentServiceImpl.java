@@ -8,6 +8,7 @@ import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.exceptions.JedisConnectionException;
 import vn.vnpay.common.enums.PaymentResponseCode;
 import vn.vnpay.common.exception.PaymentException;
 import vn.vnpay.common.response.BaseResponse;
@@ -16,14 +17,12 @@ import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.config.bankcode.Bank;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.config.gson.GsonConfig;
-import vn.vnpay.config.redis.RedisConfig;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 import vn.vnpay.enums.MessageType;
 import vn.vnpay.service.PaymentService;
 
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
@@ -56,11 +55,11 @@ public class PaymentServiceImpl implements PaymentService {
             log.info("tokenKey: {} ", tokenKey);
             String jsonResponse = gson.toJson(BaseResponse.success(tokenKey));
             // Gửi phản hồi về client và đóng kết nối sau khi gửi
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
         } catch (Exception e) {
             log.info("Error while creating tokenKey: {}", e.getMessage());
             String jsonResponse = gson.toJson(BaseResponse.unsuccessful(e.getMessage()));
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
         }
     }
 
@@ -75,12 +74,11 @@ public class PaymentServiceImpl implements PaymentService {
             //validate request
             validateRequest(ctx, paymentRequest);
 
-
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess("demo")).addListener(ChannelFutureListener.CLOSE);
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess("demo")).addListener(ChannelFutureListener.CLOSE);
         } catch (Exception e) {
             log.info("Error while creating payment: {}", e.getMessage());
             String jsonResponse = gson.toJson(BaseResponse.unsuccessful(e.getMessage()));
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(gson.toJson(jsonResponse))).addListener(ChannelFutureListener.CLOSE);
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
         }
     }
 
@@ -149,7 +147,16 @@ public class PaymentServiceImpl implements PaymentService {
                     pe.getMessage(),
                     request.getPrivateKey()
             );
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(gson.toJson(paymentResponse)))
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(gson.toJson(paymentResponse)))
+                    .addListener(ChannelFutureListener.CLOSE);
+        } catch (JedisConnectionException jce) {
+            log.info(jce.getMessage());
+            PaymentResponse paymentResponse = PaymentResponse.unsuccessful(
+                    PaymentResponseCode.UNKNOWN_ERROR.getCode(),
+                    jce.getMessage(),
+                    request.getPrivateKey()
+            );
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(gson.toJson(paymentResponse)))
                     .addListener(ChannelFutureListener.CLOSE);
         }
 
@@ -163,15 +170,15 @@ public class PaymentServiceImpl implements PaymentService {
             if (jedis.exists(request.getTokenKey())) {
                 throw new PaymentException("tokenKey đã trùng lặp trong ngày");
             }
-
-            long secondsUntilEndOfDay = getSecondsUntilMidnight();
-            log.info("TokenKey: {} expiration time: {} seconds", request.getTokenKey(), secondsUntilEndOfDay);
-
-            jedis.setex(request.getTokenKey(), secondsUntilEndOfDay, gson.toJson(request));
-        } catch (Exception e) {
-            throw new PaymentException("Lỗi khi tương tác với Redis: " + e.getMessage());
+            long secondsUnitEndOfDay = getSecondsUntilMidnight();
+            log.info("TokenKey: {} expiration time:  {} seconds", request.getTokenKey(), secondsUnitEndOfDay);
+            //Save token
+            jedis.setex(request.getTokenKey(), secondsUnitEndOfDay, gson.toJson(request));
+        } catch (JedisConnectionException e) {
+            throw new JedisConnectionException(e.getMessage());
         }
     }
+
 
     private void validatePayDate(PaymentRequestDTO request) throws PaymentException {
         if (request.getPayDate() == null || request.getPayDate().isEmpty()) {

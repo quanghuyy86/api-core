@@ -9,9 +9,6 @@ import vn.vnpay.common.response.PaymentHttpResponse;
 import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-
 @Slf4j
 public class FieldValidator {
     // Hàm kiểm tra field và gửi phản hồi nếu null hoặc empty
@@ -25,7 +22,7 @@ public class FieldValidator {
                     request.getPrivateKey()
             );
             log.info("{}: null or empty", fieldName);
-            ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(gson.toJson(paymentResponse)))
+            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(gson.toJson(paymentResponse)))
                     .addListener(ChannelFutureListener.CLOSE);
         }
 

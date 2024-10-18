@@ -16,7 +16,7 @@ public class ResponseUtil {
                 errorFieldValue
         );
 
-        ctx.writeAndFlush(PaymentHttpResponse.responseSuccess(GSON.toJson(paymentResponse)))
+        ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(GSON.toJson(paymentResponse)))
                 .addListener(ChannelFutureListener.CLOSE);
     }
 }
