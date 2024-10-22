@@ -1,25 +1,27 @@
 package vn.vnpay.service.impl;
 
 import com.google.gson.Gson;
+import com.rabbitmq.client.Channel;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.*;
+import io.netty.handler.codec.http.FullHttpRequest;
+import io.netty.handler.codec.http.HttpRequest;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.exceptions.JedisConnectionException;
 import vn.vnpay.common.enums.PaymentResponseCode;
+import vn.vnpay.common.exception.GlobalExceptionHandler;
 import vn.vnpay.common.exception.PaymentException;
 import vn.vnpay.common.response.BaseResponse;
 import vn.vnpay.common.response.PaymentHttpResponse;
-import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.config.bankcode.Bank;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.config.gson.GsonConfig;
+import vn.vnpay.config.rabbitmq.RabbitMQConfig;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
+import vn.vnpay.enums.ExchangeName;
 import vn.vnpay.enums.MessageType;
 import vn.vnpay.service.PaymentService;
+import vn.vnpay.service.RedisService;
 
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
@@ -33,7 +35,9 @@ import java.util.regex.Pattern;
 
 @Slf4j
 public class PaymentServiceImpl implements PaymentService {
-    private final JedisPool jedisPool;
+    private final RabbitMQConfig rabbitMQConfig;
+    private final RedisService redisService;
+    private final GlobalExceptionHandler exceptionHandler;
     private static final SecureRandom secureRandom = new SecureRandom();
     private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder();
     private final Gson gson = GsonConfig.getGson();
@@ -41,9 +45,10 @@ public class PaymentServiceImpl implements PaymentService {
     private static final String currentDirectory = System.getProperty("user.dir");
     private static final String PATH_BANK_CODE = currentDirectory + "/src/main/resources/bankcode.xml";
 
-    public PaymentServiceImpl(JedisPool jedisPool) {
-        this.jedisPool = jedisPool;
-
+    public PaymentServiceImpl(RabbitMQConfig rabbitMQConfig, RedisService redisService, GlobalExceptionHandler exceptionHandler) {
+        this.rabbitMQConfig = rabbitMQConfig;
+        this.redisService = redisService;
+        this.exceptionHandler = exceptionHandler;
     }
 
     @Override
@@ -57,126 +62,113 @@ public class PaymentServiceImpl implements PaymentService {
             // Gửi phản hồi về client và đóng kết nối sau khi gửi
             ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
         } catch (Exception e) {
-            log.info("Error while creating tokenKey: {}", e.getMessage());
-            String jsonResponse = gson.toJson(BaseResponse.unsuccessful(e.getMessage()));
-            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
+            exceptionHandler.handleException(ctx, e, PaymentResponseCode.UNKNOWN_ERROR.getCode(), null);
         }
     }
 
     @Override
     public void createPayment(ChannelHandlerContext ctx, FullHttpRequest request) {
+        String privateKey = null;
         try {
             String requestBody = request.content().toString(CharsetUtil.UTF_8);
 
             PaymentRequestDTO paymentRequest = gson.fromJson(requestBody, PaymentRequestDTO.class);
+            privateKey = paymentRequest.getPrivateKey();
             log.info("Begin create payment: {}", gson.toJson(paymentRequest));
 
             //validate request
             validateRequest(ctx, paymentRequest);
 
+            //push data to rabbitMQ
+            pushDataToRabbitMQ(ctx, paymentRequest);
+
             ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess("demo")).addListener(ChannelFutureListener.CLOSE);
+        } catch (PaymentException pe) {
+            exceptionHandler.handleException(ctx, pe, PaymentResponseCode.FIELD_ERROR.getCode(), privateKey);
         } catch (Exception e) {
-            log.info("Error while creating payment: {}", e.getMessage());
-            String jsonResponse = gson.toJson(BaseResponse.unsuccessful(e.getMessage()));
-            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(jsonResponse)).addListener(ChannelFutureListener.CLOSE);
+            exceptionHandler.handleException(ctx, e, PaymentResponseCode.UNKNOWN_ERROR.getCode(), privateKey);
         }
     }
 
-    void validateRequest(ChannelHandlerContext ctx, PaymentRequestDTO request) {
+    private void pushDataToRabbitMQ(ChannelHandlerContext ctx, PaymentRequestDTO request) throws InterruptedException {
+        Channel channel = rabbitMQConfig.getChannelFromPool();
         try {
-            //validate tokenKey
-            validateTokenKey(request);
+            String message = gson.toJson(request);
+            channel.basicPublish(ExchangeName.MY_EXCHANGE.getName(), "nettyRoutingKey", null, message.getBytes());
+            log.info("Gửi message sang consumer: {}", message);
+        } catch (Exception e) {
+            e.getMessage();
+        } finally {
+            rabbitMQConfig.returnChannelToPool(channel);
+        }
+    }
 
-            //validate mobile
-            validatePhoneNumber(ctx, request);
+    private void validateRequest(ChannelHandlerContext ctx, PaymentRequestDTO request) throws PaymentException {
+        //validate tokenKey
+        validateTokenKey(request);
 
-            //validate bankCode && privateKey
-            validateBankCodeAndPrivateKey(request);
+        //validate mobile
+        validatePhoneNumber(ctx, request);
 
-            //Check debitAmount, realAmount, promotionCode
-            validatePromotionCode(ctx, request);
+        //validate bankCode && privateKey
+        validateBankCodeAndPrivateKey(request);
 
-            //validate payDate
-            validatePayDate(request);
+        //Check debitAmount, realAmount, promotionCode
+        validatePromotionCode(ctx, request);
 
-            //validate apiId
-            if (request.getApiId() == null || request.getApiId().isEmpty() || request.getApiId().isBlank()) {
-                throw new PaymentException("apiId không được trống hoặc không có khoảng trắng");
-            }
+        //validate payDate
+        validatePayDate(request);
 
-            //validate oderCode
-            if (request.getOderCode() == null || request.getOderCode().isEmpty() || request.getOderCode().isBlank()) {
-                throw new PaymentException("oderCode không được trống hoặc không có khoảng trắng");
-            }
-
-            //validate respCode
-            if (request.getRespCode() == null || request.getRespCode().isEmpty() || request.getRespCode().isBlank()) {
-                throw new PaymentException("respCode không được trống hoặc không có khoảng trắng");
-            }
-
-            //validate respDesc
-            if (request.getRespDesc() == null || request.getRespDesc().isEmpty()) {
-                throw new PaymentException("respDesc không được trống");
-            }
-
-            //validate traceTransfer
-            if (request.getTraceTransfer() == null || request.getTraceTransfer().isEmpty()) {
-                throw new PaymentException("traceTransfer không được trống");
-            }
-
-            //validate messageType
-            if (request.getMessageType() == null || request.getMessageType().isEmpty()) {
-                throw new PaymentException("messageType không được trống");
-            }
-            if (!request.getMessageType().equals(MessageType.SUCCESS.getCode())) {
-                throw new PaymentException("Giá trị của messageType không chính xác");
-            }
-
-            //validate addValue
-            if (request.getAddValue().getPayMethod() == null || request.getAddValue().getPayMethod().isEmpty()) {
-                throw new PaymentException("payMethod không được trống");
-            }
-            if (request.getAddValue().getPayMethodMMS() == null) {
-                throw new PaymentException("payMethodMMS không được trống");
-            }
-
-        } catch (PaymentException pe) {
-            log.info(pe.getMessage());
-            PaymentResponse paymentResponse = PaymentResponse.unsuccessful(
-                    PaymentResponseCode.FIELD_ERROR.getCode(),
-                    pe.getMessage(),
-                    request.getPrivateKey()
-            );
-            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(gson.toJson(paymentResponse)))
-                    .addListener(ChannelFutureListener.CLOSE);
-        } catch (JedisConnectionException jce) {
-            log.info(jce.getMessage());
-            PaymentResponse paymentResponse = PaymentResponse.unsuccessful(
-                    PaymentResponseCode.UNKNOWN_ERROR.getCode(),
-                    jce.getMessage(),
-                    request.getPrivateKey()
-            );
-            ctx.writeAndFlush(PaymentHttpResponse.errorResponseSuccess(gson.toJson(paymentResponse)))
-                    .addListener(ChannelFutureListener.CLOSE);
+        //validate apiId
+        if (request.getApiId() == null || request.getApiId().isEmpty() || request.getApiId().isBlank()) {
+            throw new PaymentException("apiId không được trống hoặc không có khoảng trắng");
         }
 
+        //validate oderCode
+        if (request.getOderCode() == null || request.getOderCode().isEmpty() || request.getOderCode().isBlank()) {
+            throw new PaymentException("oderCode không được trống hoặc không có khoảng trắng");
+        }
+
+        //validate respCode
+        if (request.getRespCode() == null || request.getRespCode().isEmpty() || request.getRespCode().isBlank()) {
+            throw new PaymentException("respCode không được trống hoặc không có khoảng trắng");
+        }
+
+        //validate respDesc
+        if (request.getRespDesc() == null || request.getRespDesc().isEmpty()) {
+            throw new PaymentException("respDesc không được trống");
+        }
+
+        //validate traceTransfer
+        if (request.getTraceTransfer() == null || request.getTraceTransfer().isEmpty()) {
+            throw new PaymentException("traceTransfer không được trống");
+        }
+
+        //validate messageType
+        if (request.getMessageType() == null || request.getMessageType().isEmpty()) {
+            throw new PaymentException("messageType không được trống");
+        }
+        if (!request.getMessageType().equals(MessageType.SUCCESS.getCode())) {
+            throw new PaymentException("Giá trị của messageType không chính xác");
+        }
+
+        //validate addValue
+        if (request.getAddValue().getPayMethod() == null || request.getAddValue().getPayMethod().isEmpty()) {
+            throw new PaymentException("payMethod không được trống");
+        }
+        if (request.getAddValue().getPayMethodMMS() == null) {
+            throw new PaymentException("payMethodMMS không được trống");
+        }
     }
 
     private void validateTokenKey(PaymentRequestDTO request) throws PaymentException {
         if (request.getTokenKey() == null || request.getTokenKey().isEmpty() || request.getTokenKey().isBlank()) {
             throw new PaymentException("tokenKey không được để trống hoặc có khoảng trắng");
         }
-        try (Jedis jedis = jedisPool.getResource()) {
-            if (jedis.exists(request.getTokenKey())) {
-                throw new PaymentException("tokenKey đã trùng lặp trong ngày");
-            }
-            long secondsUnitEndOfDay = getSecondsUntilMidnight();
-            log.info("TokenKey: {} expiration time:  {} seconds", request.getTokenKey(), secondsUnitEndOfDay);
-            //Save token
-            jedis.setex(request.getTokenKey(), secondsUnitEndOfDay, gson.toJson(request));
-        } catch (JedisConnectionException e) {
-            throw new JedisConnectionException(e.getMessage());
+        if (redisService.existDataFromRedis(request.getTokenKey())){
+            throw new PaymentException("tokenKey đã trùng lặp trong ngày");
         }
+        redisService.saveDataToRedis(request.getTokenKey(), gson.toJson(request));
     }
 
 
@@ -249,4 +241,5 @@ public class PaymentServiceImpl implements PaymentService {
         LocalDateTime midnight = now.toLocalDate().plusDays(1).atStartOfDay();
         return ChronoUnit.SECONDS.between(now, midnight);
     }
+
 }

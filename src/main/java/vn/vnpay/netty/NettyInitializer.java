@@ -6,10 +6,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.stream.ChunkedWriteHandler;
-import redis.clients.jedis.JedisPool;
-import vn.vnpay.config.redis.RedisConfig;
-import vn.vnpay.service.PaymentService;
-import vn.vnpay.service.impl.PaymentServiceImpl;
+import vn.vnpay.requesthandler.PaymentHandler;
 
 public class NettyInitializer extends ChannelInitializer<SocketChannel> {
 
@@ -20,10 +17,6 @@ public class NettyInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new HttpServerCodec());
         pipeline.addLast(new HttpObjectAggregator(65536));
         pipeline.addLast(new ChunkedWriteHandler());
-
-        RedisConfig redisConfig = new RedisConfig();
-        JedisPool jedisPool = redisConfig.getJedisPool();
-        PaymentService paymentService = new PaymentServiceImpl(jedisPool);
-        pipeline.addLast(new NettyHandler(paymentService));
+        pipeline.addLast(new NettyHandler());
     }
 }
