@@ -1,0 +1,799 @@
+2024-10-17 08:31:33,650 vn.vnpay.netty.NettyServer     -                start:34   - INFO  - [] - Server started on port 8080 
+2024-10-17 08:32:07,596 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-17 08:32:07,612 ervice.impl.PaymentServiceImpl -        createPayment:72   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-17 08:32:07,682 ervice.impl.PaymentServiceImpl -      validateRequest:156  - INFO  - [] - Failed to connect to localhost:6379.
+2024-10-17 08:32:07,716 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 4016ab9b10a2fc608e189e387a22af622207ed5d10d088d686ea3132fe094da3
+2024-10-17 08:32:07,755 ervice.impl.PaymentServiceImpl -  saveTokenKeyInRedis:187  - INFO  - [] - Failed to connect to localhost:6379.
+2024-10-17 08:32:07,756 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: e957265e5d75647887b9e67244987396e99869648ef80645482575b057323b10
+2024-10-17 08:32:53,542 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-17 08:32:53,544 ervice.impl.PaymentServiceImpl -        createPayment:72   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-17 08:32:53,622 ervice.impl.PaymentServiceImpl -  saveTokenKeyInRedis:184  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV expiration time:  55626 seconds
+2024-10-18 11:53:21,409 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 14:49:34,593 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 14:49:55,352 tty.channel.ChannelInitializer -      exceptionCaught:97   - WARN  - [] - Failed to initialize a channel. Closing: [id: 0xcd9f2b8c, L:/[0:0:0:0:0:0:0:1]:8080 - R:/[0:0:0:0:0:0:0:1]:53936]
+java.lang.NumberFormatException: For input string: "guest"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at vn.vnpay.config.rabbitmq.ChannelPool.<init>(ChannelPool.java:20)
+	at vn.vnpay.config.rabbitmq.RabbitMQConfig.<init>(RabbitMQConfig.java:12)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:27)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:15)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:203)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:32)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:29)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-10-18 14:49:55,352 tty.channel.ChannelInitializer -      exceptionCaught:97   - WARN  - [] - Failed to initialize a channel. Closing: [id: 0xdc5c01b2, L:/[0:0:0:0:0:0:0:1]:8080 - R:/[0:0:0:0:0:0:0:1]:53935]
+java.lang.NumberFormatException: For input string: "guest"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at vn.vnpay.config.rabbitmq.ChannelPool.<init>(ChannelPool.java:20)
+	at vn.vnpay.config.rabbitmq.RabbitMQConfig.<init>(RabbitMQConfig.java:12)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:27)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:15)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:203)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:32)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:29)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-10-18 14:50:12,800 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 14:50:38,427 tty.channel.ChannelInitializer -      exceptionCaught:97   - WARN  - [] - Failed to initialize a channel. Closing: [id: 0xed986681, L:/[0:0:0:0:0:0:0:1]:8080 - R:/[0:0:0:0:0:0:0:1]:53954]
+java.lang.NumberFormatException: For input string: "guest"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at vn.vnpay.config.rabbitmq.ChannelPool.<init>(ChannelPool.java:20)
+	at vn.vnpay.config.rabbitmq.RabbitMQConfig.<init>(RabbitMQConfig.java:12)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:27)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:15)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:203)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:32)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:29)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-10-18 14:50:38,427 tty.channel.ChannelInitializer -      exceptionCaught:97   - WARN  - [] - Failed to initialize a channel. Closing: [id: 0xc552e61d, L:/[0:0:0:0:0:0:0:1]:8080 - R:/[0:0:0:0:0:0:0:1]:53955]
+java.lang.NumberFormatException: For input string: "guest"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at vn.vnpay.config.rabbitmq.ChannelPool.<init>(ChannelPool.java:20)
+	at vn.vnpay.config.rabbitmq.RabbitMQConfig.<init>(RabbitMQConfig.java:12)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:27)
+	at vn.vnpay.netty.NettyInitializer.initChannel(NettyInitializer.java:15)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.internalAdd(DefaultChannelPipeline.java:203)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:227)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:330)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:319)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:32)
+	at vn.vnpay.netty.NettyServer$1.initChannel(NettyServer.java:29)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:1130)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:558)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:45)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1064)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:599)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:513)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:428)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:485)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-10-18 15:27:09,941 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 15:27:15,076 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 15:27:15,092 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:27:15,160 ervice.impl.PaymentServiceImpl -     validateTokenKey:195  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV expiration time:  30764 seconds
+2024-10-18 15:29:32,809 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 15:29:40,163 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 15:29:40,171 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:29:40,235 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-18 15:29:40,273 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: d040151d2491708bef27379bd012723af0b77b2b9aeb4a6663f6757ccd0e187a
+2024-10-18 15:29:40,282 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJV",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:29:49,761 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 15:29:49,762 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:29:49,766 ervice.impl.PaymentServiceImpl -     validateTokenKey:195  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJ expiration time:  30610 seconds
+2024-10-18 15:29:49,778 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:36:25,496 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 15:36:30,743 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 15:36:30,757 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:36:30,824 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-18 15:36:30,835 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: ca741604f7315de49e3a38fd5921172f8d7a7b5c364ae793d949cb69ea9f11eb
+2024-10-18 15:36:30,844 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1FKjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:36:34,722 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 15:36:34,724 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:36:34,727 ervice.impl.PaymentServiceImpl -     validateTokenKey:195  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1KjOJ expiration time:  30205 seconds
+2024-10-18 15:36:34,741 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 15:44:33,086 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 16:20:00,944 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 16:20:04,530 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:20:04,560 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:04,641 ervice.impl.PaymentServiceImpl -      validateRequest:166  - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-18 16:20:04,692 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 11f68ea24e729ccb934d1f1247108fd47757dd63146636fad3e8651f291d04a0
+2024-10-18 16:20:04,715 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjOJ",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:09,127 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:20:09,128 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:09,137 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwJxp_ZC1KjO expiration time:  27590 seconds
+2024-10-18 16:20:09,195 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwJxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:44,399 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:20:44,401 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:44,406 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk7MalQ3riQlTwxp_ZC1KjO expiration time:  27555 seconds
+2024-10-18 16:20:44,410 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:53,766 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:20:53,767 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:53,771 ervice.impl.PaymentServiceImpl -      validateRequest:166  - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-18 16:20:53,772 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 8ac31e5b5ea2568a60dd6bd34333d52e1fc7c7f76d0a21519f775a1e226bc27a
+2024-10-18 16:20:53,773 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk7MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:57,366 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:20:57,367 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk37MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:20:57,373 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk37MalQ3riQlTwxp_ZC1KjO expiration time:  27542 seconds
+2024-10-18 16:20:57,382 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk37MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:32:32,756 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
+2024-10-18 16:33:25,901 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:33:25,911 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk37MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:33:25,981 ervice.impl.PaymentServiceImpl -      validateRequest:166  - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-18 16:33:25,994 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 784fdf0ee584e632c6664e223b291ca4b3af35a502df38fb0c6d7b8d6f34c7de
+2024-10-18 16:33:26,002 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk37MalQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:33:33,716 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
+2024-10-18 16:33:33,717 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk37Ma2lQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:33:33,722 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk37Ma2lQ3riQlTwxp_ZC1KjO expiration time:  26786 seconds
+2024-10-18 16:33:33,739 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
+  "tokenKey": "wzIfgJk37Ma2lQ3riQlTwxp_ZC1KjO",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-18 16:47:15,002 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
