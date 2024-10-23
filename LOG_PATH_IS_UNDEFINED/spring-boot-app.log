@@ -1,1253 +1,8 @@
-2024-10-22 09:46:08,658 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
-2024-10-22 09:46:15,433 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 09:46:15,520 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:46:15,528 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C12j",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:46:15,584 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C12j expiration time:  51224 seconds
-2024-10-22 09:46:15,605 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C12j",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:48:08,043 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:48:08,044 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C121",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:48:08,047 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C121 expiration time:  51111 seconds
-2024-10-22 09:48:08,056 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C121",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:50:31,287 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:50:31,287 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C122",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:50:31,291 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C122 expiration time:  50968 seconds
-2024-10-22 09:50:31,294 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C122",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:13,005 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:51:13,006 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C123",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:13,008 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C123 expiration time:  50926 seconds
-2024-10-22 09:51:13,011 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C123",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:34,604 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:51:34,604 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C124",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:34,608 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C124 expiration time:  50905 seconds
-2024-10-22 09:51:34,611 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C124",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:47,238 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:51:47,238 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C125",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:51:47,241 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C125 expiration time:  50892 seconds
-2024-10-22 09:51:47,244 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C125",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:52:06,904 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:52:06,904 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C126",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:52:06,908 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C126 expiration time:  50873 seconds
-2024-10-22 09:52:06,911 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C126",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:53:11,890 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 09:53:11,891 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C127",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 09:53:11,894 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C127 expiration time:  50808 seconds
-2024-10-22 09:53:11,897 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C127",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 10:04:09,236 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 10:04:09,237 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 10:04:09,240 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C128 expiration time:  50150 seconds
-2024-10-22 10:04:09,244 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 10:36:26,528 vn.vnpay.netty.NettyServer     -                start:36   - INFO  - [] - Server started on port 8080 
-2024-10-22 10:36:40,769 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 10:36:40,876 vn.vnpay.netty.NettyHandler    -         channelRead0:32   - INFO  - [] - Received request: POST /payment
-2024-10-22 10:36:40,885 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 10:36:54,926 ervice.impl.PaymentServiceImpl -      validateRequest:166  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 10:36:57,927 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 364725b7a80ab891eacfca558f5f05077720215173114727a3f0ce02feca5903
-2024-10-22 10:37:16,004 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:99   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:31:15,699 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 13:31:16,067 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 13:31:24,274 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:31:24,286 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:31:24,356 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:31:24,377 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 66dc0f72f8e90b97e7a1be6037b112b0329e0c070efa71e1d1bd49b23a82f87d
-2024-10-22 13:31:24,384 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C128",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:31:28,790 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:31:28,790 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C18",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:31:28,792 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C18 expiration time:  37711 seconds
-2024-10-22 13:31:28,821 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C18",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:35:48,319 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 13:35:48,615 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 13:35:51,430 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:35:51,438 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C18",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:35:51,492 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:35:51,502 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: eab85e2dee3b114dba316cbae452dea57437cdcefe313c4a7f414ff8d0c8c6de
-2024-10-22 13:35:51,508 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C18",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:35:55,247 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:35:55,247 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:35:55,250 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_333C14 expiration time:  37444 seconds
-2024-10-22 13:35:55,259 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:36:04,828 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 13:36:04,829 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: null
-2024-10-22 13:36:04,830 ervice.impl.PaymentServiceImpl -        createPayment:87   - INFO  - [] - Error while creating payment: Cannot invoke "vn.vnpay.dto.payment.request.PaymentRequestDTO.getTokenKey()" because "request" is null
-2024-10-22 13:36:17,354 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:36:17,355 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:36:17,357 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:36:17,357 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 82d695b2cfe01c35a6a864ae157b040925a2b8166d2b2569ea0521c3768f9b27
-2024-10-22 13:36:17,358 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:37:16,782 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 13:37:17,075 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 13:37:30,569 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:37:30,577 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:37:30,622 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:37:30,632 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: c9205dd5893567776eb92f107968205d4ff08134b71677b01185a6bd953b2d42
-2024-10-22 13:37:30,639 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_333C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:37:30,640 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: JgQR-F7Iwai9e0o0o9ol68iVXGIvMq6_ 
-2024-10-22 13:37:34,217 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:37:34,218 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:37:34,220 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_332C14 expiration time:  37345 seconds
-2024-10-22 13:37:34,235 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C14",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:37:34,236 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: qZeIweEoZWY2BWUp8wzHT4uu-huSD3Yq 
-2024-10-22 13:37:54,398 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 13:37:59,080 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 13:38:08,957 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:38:08,966 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C13",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:38:09,019 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_332C13 expiration time:  37310 seconds
-2024-10-22 13:38:09,037 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C13",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:38:09,040 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: q9B3KekxkjFH0y1mpsf7agU0Dr-7uhZw 
-2024-10-22 13:38:15,011 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:38:15,012 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C13",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:38:15,013 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:38:15,026 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 843ad913acca179c6f92386612ff35793c8122aaa5deaaf718d5277b10ecc844
-2024-10-22 13:38:15,035 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C13",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:38:15,036 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: 3LopYnG4_UCoClzPQq0qn5szZ_YBNc9J 
-2024-10-22 13:39:11,237 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 13:39:11,546 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 13:39:14,433 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:39:21,369 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:39:21,414 ervice.impl.PaymentServiceImpl -     validateTokenKey:196  - INFO  - [] - TokenKey: wzIfgJk3Ma2lQ3srs25Twxp_332C33 expiration time:  37238 seconds
-2024-10-22 13:39:21,427 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:39:24,199 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: aS140dkNtUq5rgGsZImLzAhp5PfGMVZh 
-2024-10-22 13:39:41,130 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 13:39:44,414 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:39:44,416 ervice.impl.PaymentServiceImpl -      validateRequest:165  - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 13:39:44,424 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1bebc62f206cf8b214f3f7e4771e13dd38a4087baccd3eb0da77613bca5205c8
-2024-10-22 13:39:44,427 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:98   - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 13:39:49,085 ervice.impl.PaymentServiceImpl -       createTokenKey:60   - INFO  - [] - tokenKey: 7529O6ndyHCDUsj_QiNBLTdkUZpDfLyo 
-2024-10-22 15:15:50,325 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 15:15:50,706 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 15:17:55,040 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: GET /payment
-2024-10-22 15:18:01,423 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: PUT /payment
-2024-10-22 15:18:06,204 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment/1
-2024-10-22 15:18:18,699 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:18:18,699 .requesthandler.PaymentHandler -               accept:31   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:18:18,712 ervice.impl.PaymentServiceImpl -        createPayment:81   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": null,
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:18:18,739 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - apiId không được trống hoặc không có khoảng trắng
-2024-10-22 15:18:18,748 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: fa98afd5b68ca47071c4cd6edcf2fadad2f7b2cb2b41157969983731ab705969
-2024-10-22 15:18:42,564 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:18:42,564 .requesthandler.PaymentHandler -               accept:31   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:18:42,565 ervice.impl.PaymentServiceImpl -        createPayment:81   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:18:42,570 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:104  - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:22:25,840 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 15:22:26,162 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 15:55:38,481 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 15:55:38,795 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 15:55:43,166 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:55:43,166 .requesthandler.PaymentHandler -               accept:29   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:55:43,175 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C33",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:55:43,231 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 15:55:43,239 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 31624eb39dfd817eef5fba60c335e842a728b35044aa6a08662b32155dcebb1e
-2024-10-22 15:55:53,538 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:55:53,539 .requesthandler.PaymentHandler -               accept:29   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:55:53,540 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C334",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:55:53,559 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - Gửi message sang consumer: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C334",
-  "apiId": "akhsdgbkahjs",
-  "mobile": "0323456789",
-  "bankCode": "01101014",
-  "privateKey": "09742344",
-  "accountNo": "123456789",
-  "payDate": "20241009123045",
-  "additionalData": "Some additional data",
-  "debitAmount": 1000000.50,
-  "respCode": "00",
-  "respDesc": "Transaction Successful",
-  "traceTransfer": "1234567890",
-  "messageType": "1",
-  "checkSum": "abcdef123456",
-  "oderCode": "ORD001",
-  "userName": "john_doe",
-  "realAmount": 950000.75,
-  "promotionCode": "PROMO2024",
-  "addValue": {
-    "payMethod": "01",
-    "payMethodMMS": 1
-  }
-}
-2024-10-22 15:56:50,014 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 15:56:50,326 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 15:56:56,041 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:56:56,042 .requesthandler.PaymentHandler -               accept:29   - INFO  - [] - Received request: POST /payment
-2024-10-22 15:56:56,049 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+2024-10-23 10:17:03,061 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 10:17:03,524 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 10:17:17,890 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 10:17:17,891 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 10:17:17,905 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
   "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
@@ -1271,7 +26,7 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 15:56:56,134 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - Gửi message sang consumer: {
+2024-10-23 10:17:18,011 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
   "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
@@ -1294,13 +49,13 @@
     "payMethod": "01",
     "payMethodMMS": 1
   }
-}
-2024-10-22 16:00:31,505 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:00:31,845 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:01:09,368 vn.vnpay.netty.NettyHandler    -         channelRead0:30   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:01:24,216 .requesthandler.PaymentHandler -               accept:29   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:03:05,984 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+}, correlationId: 1cc8ab14-6251-41ef-9d1c-015e22e986e4
+2024-10-23 10:36:34,500 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 10:36:34,841 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 10:36:50,667 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 10:36:50,668 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 10:36:50,678 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3dhahaa",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1323,20 +78,36 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:03:25,395 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:03:25,432 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: ee52b642e8a85b8c144d4045bdf622902359cc76ef3d84d507ede6e980c67c64
-2024-10-22 16:03:57,983 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:03:58,285 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:05:18,371 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:05:18,733 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:06:44,642 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:06:45,013 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:07:22,297 .requesthandler.PaymentHandler -               accept:29   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:15:33,282 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:15:33,613 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:16:01,183 vn.vnpay.netty.NettyHandler    -         channelRead0:25   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:16:06,802 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+2024-10-23 10:36:50,764 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3dhahaa",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: 007d18b8-39a7-4e6d-b977-ca1b89940be1
+2024-10-23 10:45:32,894 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 10:45:33,273 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 10:45:56,248 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 10:45:56,249 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 10:45:56,258 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "huhuuhihihihahaha",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1359,11 +130,39 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:16:18,431 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:16:18,467 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: c0732d2fc37f6b4e86d706b39a6f2ad6baa9474a25de53b94f24fd95e12b79bb
-2024-10-22 16:16:35,495 vn.vnpay.netty.NettyHandler    -         channelRead0:25   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:17:09,368 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+2024-10-23 10:45:56,346 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "huhuuhihihihahaha",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: 39b3f398-6075-407b-af41-e775e0264bf9
+2024-10-23 10:45:56,412 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 10:46:13,761 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 10:46:14,125 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 10:51:14,097 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 10:51:14,421 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 10:51:37,694 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 10:51:37,694 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 10:51:37,702 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1386,16 +185,36 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:17:11,497 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:17:11,499 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 88a52e10612d14e166e950cdd6501ae3ba8710da43b778e8d05eccdc32b7c1ab
-2024-10-22 16:18:36,326 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:19:42,075 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:20:06,035 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:20:33,635 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:21:04,101 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:21:36,827 vn.vnpay.netty.NettyHandler    -         channelRead0:25   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:21:36,838 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+2024-10-23 10:51:37,769 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "taquanghuy",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: fa5b3106-7ffc-4580-8cdd-63009dc7de74
+2024-10-23 10:52:37,064 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 10:52:37,065 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - phản hồi từ consumer: Success
+2024-10-23 10:53:52,599 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 10:53:52,599 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 10:53:52,600 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy2",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1418,13 +237,38 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:21:36,845 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:21:36,858 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: df1ad08627f2a62ac351a746989d0346c10a00ed4adf8dabfc6529522bd910c9
-2024-10-22 16:22:25,763 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:22:28,957 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:23:54,143 vn.vnpay.netty.NettyHandler    -         channelRead0:25   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:24:01,356 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+2024-10-23 10:53:52,610 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "taquanghuy2",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: c865ffab-8237-4be4-92e3-737f3d7e6e57
+2024-10-23 10:54:17,296 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 10:54:17,296 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - phản hồi từ consumer: Success
+2024-10-23 11:14:26,198 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-23 11:14:26,539 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-23 11:14:33,806 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 11:14:33,807 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 11:14:33,815 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy3",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1447,42 +291,36 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:24:03,732 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:24:51,206 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:25:02,286 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:25:15,427 vn.vnpay.netty.NettyHandler    -         channelRead0:25   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:37:07,405 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:37:13,925 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:37:36,382 vn.vnpay.netty.NettyHandler    -         channelRead0:27   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 16:38:06,068 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
-2024-10-22 16:38:06,087 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Cannot invoke "vn.vnpay.dto.payment.request.PaymentRequestDTO.getPrivateKey()" because "paymentRequest" is null
-2024-10-22 16:38:19,795 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:38:20,137 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:38:21,231 vn.vnpay.netty.NettyHandler    -         channelRead0:27   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 16:38:23,223 requesthandler.TokenKeyHandler -               accept:20   - INFO  - [] - Processing token key request
-2024-10-22 16:38:26,901 ervice.impl.PaymentServiceImpl -       createTokenKey:62   - INFO  - [] - tokenKey: ZE-o0BPavAg8A3C6zzqmQPeuTW9Z1frJ 
-2024-10-22 16:38:36,205 vn.vnpay.netty.NettyHandler    -         channelRead0:27   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 16:38:46,382 requesthandler.TokenKeyHandler -               accept:20   - INFO  - [] - Processing token key request
-2024-10-22 16:38:49,907 ervice.impl.PaymentServiceImpl -       createTokenKey:62   - INFO  - [] - tokenKey: dxc35rUGo4cO2PFL1blEZVx53riUBOwH 
-2024-10-22 16:45:07,188 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:45:07,488 vn.vnpay.netty.NettyServer     -                start:47   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:45:10,112 vn.vnpay.netty.NettyHandler    -         channelRead0:27   - INFO  - [] - Received request: GET /payment/token-key
-2024-10-22 16:45:10,112 requesthandler.TokenKeyHandler -               accept:20   - INFO  - [] - Processing token key request
-2024-10-22 16:45:10,113 ervice.impl.PaymentServiceImpl -       createTokenKey:62   - INFO  - [] - tokenKey: iP6V7IONlt7z3Xt6YAOVuEgnQzZyiUI8 
-2024-10-22 16:45:13,723 vn.vnpay.netty.NettyHandler    -         channelRead0:27   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 16:45:13,723 requesthandler.TokenKeyHandler -               accept:20   - INFO  - [] - Processing token key request
-2024-10-22 16:45:13,723 ervice.impl.PaymentServiceImpl -       createTokenKey:62   - INFO  - [] - tokenKey: XCF7gXuRxh8Zsvr-FULEt1AjfvHF_aaG 
-2024-10-22 16:56:30,543 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
-2024-10-22 16:56:30,878 vn.vnpay.netty.NettyServer     -                start:49   - INFO  - [] - Server started on port 8080 
-2024-10-22 16:56:35,638 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: GET /payment/token-key
-2024-10-22 16:56:35,639 requesthandler.TokenKeyHandler -               accept:20   - INFO  - [] - Processing token key request
-2024-10-22 16:56:35,640 ervice.impl.PaymentServiceImpl -       createTokenKey:62   - INFO  - [] - tokenKey: zm0VEPINsXhCkfxM3du3fhey5DZTrXwY 
-2024-10-22 16:56:38,695 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment/token-key
-2024-10-22 16:56:47,648 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: GET /payment
-2024-10-22 16:56:50,879 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
-2024-10-22 16:56:50,880 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
-2024-10-22 16:56:50,883 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
-  "tokenKey": "wzIfgJk3Ma2lQ3srs25Twxp_332C3d34",
+2024-10-23 11:14:33,884 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "taquanghuy3",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: 135287aa-f0ff-4381-8bd0-ec224bb85ce0
+2024-10-23 11:14:33,963 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 11:14:33,964 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - phản hồi từ consumer: Success
+2024-10-23 11:14:37,659 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 11:14:37,659 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 11:14:37,659 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy4",
   "apiId": "akhsdgbkahjs",
   "mobile": "0323456789",
   "bankCode": "01101014",
@@ -1505,5 +343,81 @@
     "payMethodMMS": 1
   }
 }
-2024-10-22 16:56:50,931 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
-2024-10-22 16:56:50,940 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: f73892d87b95d59d95a6fb7ee775eff60cdf8425417749cd6aa9627292c22e27
+2024-10-23 11:14:37,670 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "taquanghuy4",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: bbae743e-6a6f-4977-a992-2e6431b61078
+2024-10-23 11:14:37,685 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 11:14:37,685 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - phản hồi từ consumer: Success
+2024-10-23 11:14:41,145 vn.vnpay.netty.NettyHandler    -         channelRead0:22   - INFO  - [] - Received request: POST /payment
+2024-10-23 11:14:41,145 .requesthandler.PaymentHandler -               accept:27   - INFO  - [] - Processing payment request
+2024-10-23 11:14:41,145 ervice.impl.PaymentServiceImpl -        createPayment:80   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy5",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-23 11:14:41,159 .vnpay.service.RabbitMQService - sendMessageWithReply:75   - INFO  - [] - Message sent to exchange: myExchange, routingKey: nettyRoutingKey, message: {
+  "tokenKey": "taquanghuy5",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}, correlationId: 64dc563c-2be9-42e3-9226-23c117f7dcb4
+2024-10-23 11:14:41,173 .vnpay.service.RabbitMQService - sendMessageWithReply:89   - INFO  - [] - Received response: Success
+2024-10-23 11:14:41,173 ervice.impl.PaymentServiceImpl -   pushDataToRabbitMQ:100  - INFO  - [] - phản hồi từ consumer: Success
