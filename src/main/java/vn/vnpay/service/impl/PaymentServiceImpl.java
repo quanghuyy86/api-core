@@ -21,6 +21,7 @@ import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 import vn.vnpay.enums.ExchangeName;
 import vn.vnpay.enums.MessageType;
 import vn.vnpay.service.PaymentService;
+import vn.vnpay.service.RabbitMQService;
 import vn.vnpay.service.RedisService;
 
 import java.security.SecureRandom;
@@ -38,6 +39,7 @@ public class PaymentServiceImpl implements PaymentService {
     private final RabbitMQConfig rabbitMQConfig;
     private final RedisService redisService;
     private final GlobalExceptionHandler exceptionHandler;
+    private final RabbitMQService rabbitMQService;
     private static final SecureRandom secureRandom = new SecureRandom();
     private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder();
     private final Gson gson = GsonConfig.getGson();
@@ -45,10 +47,11 @@ public class PaymentServiceImpl implements PaymentService {
     private static final String currentDirectory = System.getProperty("user.dir");
     private static final String PATH_BANK_CODE = currentDirectory + "/src/main/resources/bankcode.xml";
 
-    public PaymentServiceImpl(RabbitMQConfig rabbitMQConfig, RedisService redisService, GlobalExceptionHandler exceptionHandler) {
+    public PaymentServiceImpl(RabbitMQConfig rabbitMQConfig, RedisService redisService, GlobalExceptionHandler exceptionHandler, RabbitMQService rabbitMQService) {
         this.rabbitMQConfig = rabbitMQConfig;
         this.redisService = redisService;
         this.exceptionHandler = exceptionHandler;
+        this.rabbitMQService = rabbitMQService;
     }
 
     @Override
@@ -90,17 +93,11 @@ public class PaymentServiceImpl implements PaymentService {
         }
     }
 
-    private void pushDataToRabbitMQ(ChannelHandlerContext ctx, PaymentRequestDTO request) throws InterruptedException {
-        Channel channel = rabbitMQConfig.getChannelFromPool();
-        try {
+    private void pushDataToRabbitMQ(ChannelHandlerContext ctx, PaymentRequestDTO request) throws Exception {
+
             String message = gson.toJson(request);
-            channel.basicPublish(ExchangeName.MY_EXCHANGE.getName(), "nettyRoutingKey", null, message.getBytes());
-            log.info("Gửi message sang consumer: {}", message);
-        } catch (Exception e) {
-            e.getMessage();
-        } finally {
-            rabbitMQConfig.returnChannelToPool(channel);
-        }
+            String responseMessage = rabbitMQService.sendMessageWithReply(message,"nettyRoutingKey");
+            log.info("phản hồi từ consumer: {}", responseMessage);
     }
 
     private void validateRequest(ChannelHandlerContext ctx, PaymentRequestDTO request) throws PaymentException {
