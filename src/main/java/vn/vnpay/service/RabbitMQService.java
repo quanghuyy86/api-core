@@ -2,103 +2,102 @@ package vn.vnpay.service;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.DeliverCallback;
+import com.rabbitmq.client.MessageProperties;
+import io.netty.channel.ChannelException;
 import lombok.extern.slf4j.Slf4j;
-import vn.vnpay.config.rabbitmq.RabbitMQConfig;
-import vn.vnpay.enums.ExchangeName;
+import vn.vnpay.config.rabbitmq.ChannelPool;
 
+import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 @Slf4j
 public class RabbitMQService {
-    private final RabbitMQConfig rabbitMQConfig;
+    private final ChannelPool channelPool;
 
-    public RabbitMQService(RabbitMQConfig rabbitMQConfig) {
-        this.rabbitMQConfig = rabbitMQConfig;
+    public RabbitMQService(ChannelPool channelPool) {
+        this.channelPool = channelPool;
     }
 
-    // Phương thức để gửi message đến RabbitMQ (không yêu cầu phản hồi)
-    public void sendMessage(String message, String routingKey) throws Exception {
+    public void sendMessage(String queueName, String message) {
         Channel channel = null;
         try {
-            // Lấy Channel từ pool
-            channel = rabbitMQConfig.getChannelFromPool();
-
-            // Gửi message tới exchange với routingKey
-            channel.basicPublish(
-                    ExchangeName.MY_EXCHANGE.getName(),
-                    routingKey,
-                    null,
-                    message.getBytes("UTF-8")
-            );
-
-            log.info("Message sent to exchange: {}, routingKey: {}, message: {}",
-                    ExchangeName.MY_EXCHANGE.getName(), routingKey, message);
-
+            channel = channelPool.getChannel(); // Lấy kênh từ pool
+            channel.queueDeclare(queueName, true, false, false, null); // Đảm bảo hàng đợi tồn tại
+            channel.basicPublish("", queueName, null, message.getBytes("UTF-8")); // Gửi thông điệp
+            System.out.println(" [x] Sent '" + message + "'");
         } catch (Exception e) {
-            log.error("Failed to send message: ", e);
-            throw e;
+            throw new ChannelException("Could not send message", e);
         } finally {
-            // Trả Channel về pool
             if (channel != null) {
-                rabbitMQConfig.returnChannelToPool(channel);
+                channelPool.returnChannel(channel); // Trả kênh lại cho pool
             }
         }
     }
 
-    // Phương thức để gửi message đến RabbitMQ và nhận phản hồi (RPC)
-    public String sendMessageWithReply(String message, String routingKey) throws Exception {
+    public void receiveMessages(String queueName) {
         Channel channel = null;
-        String response = null;
         try {
-            // Lấy Channel từ pool
-            channel = rabbitMQConfig.getChannelFromPool();
+            channel = channelPool.getChannel(); // Lấy kênh từ pool
+            channel.queueDeclare(queueName, true, false, false, null); // Đảm bảo hàng đợi tồn tại
 
-            // Tạo một queue tạm thời cho RPC
-            String replyQueue = channel.queueDeclare().getQueue();
-            final String corrId = java.util.UUID.randomUUID().toString();
+            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+                String message = new String(delivery.getBody(), "UTF-8");
+                System.out.println(" [x] Received '" + message + "'");
+                //Xử lý message
+            };
 
-            // Cài đặt thuộc tính message để đính kèm corrId và replyQueue
-            AMQP.BasicProperties props = new AMQP.BasicProperties.Builder()
-                    .correlationId(corrId)
-                    .replyTo(replyQueue)
-                    .build();
+            channel.basicConsume(queueName, true, deliverCallback, consumerTag -> {
+            });
+        } catch (Exception e) {
+            throw new ChannelException("Could not receive messages", e);
+        } finally {
+            if (channel != null) {
+                channelPool.returnChannel(channel); // Trả kênh lại cho pool
+            }
+        }
+    }
 
-            // Gửi message tới exchange với routingKey và thuộc tính props
-            channel.basicPublish(
-                    ExchangeName.MY_EXCHANGE.getName(),
-                    routingKey,
-                    props,
-                    message.getBytes("UTF-8")
-            );
+    public String sendMessageAndWaitForResponse(String queueName, String message) {
+        Channel channel = null;
+        final String correlationId = UUID.randomUUID().toString();
+        BlockingQueue<String> response = new ArrayBlockingQueue<>(1); // Hàng đợi để chờ phản hồi
 
-            log.info("Message sent to exchange: {}, routingKey: {}, message: {}, correlationId: {}",
-                    ExchangeName.MY_EXCHANGE.getName(), routingKey, message, corrId);
+        try {
+            channel = channelPool.getChannel();
+            channel.queueDeclare(queueName, true, false, false, null); // Đảm bảo hàng đợi tồn tại
 
-            // Tạo một consumer để lắng nghe phản hồi trên replyQueue
-            final BlockingQueue<String> responseQueue = new ArrayBlockingQueue<>(1);
-            String consumerTag = channel.basicConsume(replyQueue, true, (consumerTag1, delivery) -> {
-                if (delivery.getProperties().getCorrelationId().equals(corrId)) {
-                    responseQueue.offer(new String(delivery.getBody(), "UTF-8"));
+            // Cài đặt DeliverCallback để nhận phản hồi
+            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+                if (delivery.getProperties().getCorrelationId().equals(correlationId)) {
+                    String responseMessage = new String(delivery.getBody(), StandardCharsets.UTF_8);
+                    response.offer(responseMessage); // Đưa phản hồi vào hàng đợi
                 }
-            }, consumerTag1 -> {});
+            };
 
-            //Đang xử lý response
-            // Chờ phản hồi từ RabbitMQ
-            response = responseQueue.take();
+            // Đăng ký consumer cho phản hồi
+            String replyQueueName = channel.queueDeclare().getQueue(); // Tạo hàng đợi cho phản hồi
+            channel.basicConsume(replyQueueName, true, deliverCallback, consumerTag -> {});
 
-            log.info("Received response: {}", response);
+            // Gửi thông điệp với thuộc tính trả lời
+            AMQP.BasicProperties props = MessageProperties.PERSISTENT_TEXT_PLAIN.builder()
+                    .correlationId(correlationId)
+                    .replyTo(replyQueueName)
+                    .build();
+            channel.basicPublish("", queueName, props, message.getBytes(StandardCharsets.UTF_8));
+            System.out.println(" [x] Sent '" + message + "' and waiting for response...");
 
+            // Chờ phản hồi
+            return response.take();
         } catch (Exception e) {
-            log.error("Failed to send message with reply: ", e);
-            throw e;
+            throw new ChannelException("Could not send message and wait for response: " +  e.getMessage());
         } finally {
-            // Trả Channel về pool
             if (channel != null) {
-                rabbitMQConfig.returnChannelToPool(channel);
+                channelPool.returnChannel(channel);
             }
         }
-        return response;
     }
 
 }

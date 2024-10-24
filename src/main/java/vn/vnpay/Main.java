@@ -6,7 +6,7 @@ import redis.clients.jedis.JedisPool;
 import vn.vnpay.common.exception.GlobalExceptionHandler;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.config.gson.GsonConfig;
-import vn.vnpay.config.rabbitmq.RabbitMQConfig;
+import vn.vnpay.config.rabbitmq.ChannelPool;
 import vn.vnpay.config.redis.RedisConfig;
 import vn.vnpay.enums.Route;
 import vn.vnpay.netty.NettyServer;
@@ -24,11 +24,15 @@ public class Main {
 
         RedisConfig redisConfig = new RedisConfig();
         JedisPool jedisPool = redisConfig.getJedisPool();
-        RabbitMQConfig rabbitMQConfig = new RabbitMQConfig();
-        GlobalExceptionHandler exceptionHandler = new GlobalExceptionHandler();
         RedisService redisService = new RedisService(jedisPool);
-        RabbitMQService rabbitMQService = new RabbitMQService(rabbitMQConfig);
+
+        ChannelPool channelPool = new ChannelPool();
+        RabbitMQService rabbitMQService = new RabbitMQService(channelPool);
+
+        GlobalExceptionHandler exceptionHandler = new GlobalExceptionHandler();
+
         XmlBankValidator xmlBankValidator = new XmlBankValidator();
+
         Gson gson = GsonConfig.getGson();
 
         PaymentService paymentService = new PaymentServiceImpl(redisService, exceptionHandler, rabbitMQService, xmlBankValidator, gson);

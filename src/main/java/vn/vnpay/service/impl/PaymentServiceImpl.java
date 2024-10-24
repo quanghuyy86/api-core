@@ -17,6 +17,7 @@ import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
 import vn.vnpay.enums.MessageType;
+import vn.vnpay.enums.QueueName;
 import vn.vnpay.service.PaymentService;
 import vn.vnpay.service.RabbitMQService;
 import vn.vnpay.service.RedisService;
@@ -40,8 +41,7 @@ public class PaymentServiceImpl implements PaymentService {
     private static final String PHONE_REGEX = "^(03|05|07|08|09)[0-9]{8}$";
 
     public PaymentServiceImpl(RedisService redisService, GlobalExceptionHandler exceptionHandler,
-                              RabbitMQService rabbitMQService, XmlBankValidator xmlBankValidator,
-                              Gson gson) {
+                              RabbitMQService rabbitMQService, XmlBankValidator xmlBankValidator, Gson gson) {
         this.redisService = redisService;
         this.exceptionHandler = exceptionHandler;
         this.rabbitMQService = rabbitMQService;
@@ -80,8 +80,7 @@ public class PaymentServiceImpl implements PaymentService {
             validateRequest(paymentRequest);
 
             //push data to rabbitMQ
-            pushDataToRabbitMQ(ctx, paymentRequest);
-
+            String responseMessage = rabbitMQService.sendMessageAndWaitForResponse(QueueName.MY_QUEUE.getName(), gson.toJson(paymentRequest));
 
             ctx.writeAndFlush(PaymentHttpResponse
                             .responseSuccess(gson.toJson(PaymentResponse.success(paymentRequest.getPrivateKey(), paymentRequest.getAddValue()))))
@@ -93,12 +92,6 @@ public class PaymentServiceImpl implements PaymentService {
         }
     }
 
-    private void pushDataToRabbitMQ(ChannelHandlerContext ctx, PaymentRequestDTO request) throws Exception {
-
-        String message = gson.toJson(request);
-        String responseMessage = rabbitMQService.sendMessageWithReply(message, "nettyRoutingKey");
-        log.info("phản hồi từ consumer: {}", responseMessage);
-    }
 
     private void validateRequest(PaymentRequestDTO request) throws PaymentException {
 

@@ -43,7 +43,10 @@ public class NettyServer {
                         }
                     });
             ChannelFuture f = b.bind(port).sync();
-            log.info("Server started on port {} ", port);
+            log.info("Starting NettyServer using Java {} with PID {} on port {}",
+                    System.getProperty("java.version"),
+                    ProcessHandle.current().pid(),
+                    port);
             f.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
