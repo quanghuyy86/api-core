@@ -1,5 +1,8 @@
 package vn.vnpay.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum MessageType {
     SUCCESS("1", "Thanh cong")
     ;
@@ -11,11 +14,4 @@ public enum MessageType {
         this.message = message;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
 }

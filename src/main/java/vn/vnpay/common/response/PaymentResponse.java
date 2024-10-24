@@ -1,5 +1,7 @@
 package vn.vnpay.common.response;
 
+import lombok.Getter;
+import lombok.Setter;
 import vn.vnpay.common.enums.PaymentResponseCode;
 import vn.vnpay.common.util.CheckSumUtil;
 import vn.vnpay.common.util.ResponseTimeUtil;
@@ -9,6 +11,8 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.UUID;
 
+@Getter
+@Setter
 public class PaymentResponse implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -59,51 +63,5 @@ public class PaymentResponse implements Serializable {
         return UUID.randomUUID().toString().replace("-", "");
     }
 
-    public String getCode() {
-        return code;
-    }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getResponseId() {
-        return responseId;
-    }
-
-    public void setResponseId(String responseId) {
-        this.responseId = responseId;
-    }
-
-    public String getCheckSum() {
-        return checkSum;
-    }
-
-    public void setCheckSum(String checkSum) {
-        this.checkSum = checkSum;
-    }
-
-    public AddValueDTO getAddValue() {
-        return addValue;
-    }
-
-    public String getResponseTime() {
-        return responseTime;
-    }
-
-    public void setResponseTime(String responseTime) {
-        this.responseTime = responseTime;
-    }
-
-    public void setAddValue(AddValueDTO addValue) {
-        this.addValue = addValue;
-    }
 }

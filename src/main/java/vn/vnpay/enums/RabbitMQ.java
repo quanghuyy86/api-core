@@ -1,5 +1,8 @@
 package vn.vnpay.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum RabbitMQ {
     POOL_SIZE("pool", 10),
     PORT("rabbitMQ-port", 5672),
@@ -19,9 +22,6 @@ public enum RabbitMQ {
         this.value = value;
     }
 
-    public String getName() {
-        return name;
-    }
 
     // Trả về giá trị dưới dạng String
     public String getStringValue() {

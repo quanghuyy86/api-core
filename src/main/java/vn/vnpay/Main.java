@@ -1,8 +1,11 @@
 package vn.vnpay;
 
+import com.google.gson.Gson;
 import io.netty.handler.codec.http.HttpMethod;
 import redis.clients.jedis.JedisPool;
 import vn.vnpay.common.exception.GlobalExceptionHandler;
+import vn.vnpay.config.bankcode.XmlBankValidator;
+import vn.vnpay.config.gson.GsonConfig;
 import vn.vnpay.config.rabbitmq.RabbitMQConfig;
 import vn.vnpay.config.redis.RedisConfig;
 import vn.vnpay.enums.Route;
@@ -25,7 +28,10 @@ public class Main {
         GlobalExceptionHandler exceptionHandler = new GlobalExceptionHandler();
         RedisService redisService = new RedisService(jedisPool);
         RabbitMQService rabbitMQService = new RabbitMQService(rabbitMQConfig);
-        PaymentService paymentService = new PaymentServiceImpl(rabbitMQConfig, redisService, exceptionHandler, rabbitMQService);
+        XmlBankValidator xmlBankValidator = new XmlBankValidator();
+        Gson gson = GsonConfig.getGson();
+
+        PaymentService paymentService = new PaymentServiceImpl(redisService, exceptionHandler, rabbitMQService, xmlBankValidator, gson);
 
         new NettyServer(port)
                 .addRoute(Route.CREATE_PAYMENT.getPath(), HttpMethod.POST, new PaymentHandler(paymentService))

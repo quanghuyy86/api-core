@@ -1,5 +1,8 @@
 package vn.vnpay.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum QueueName {
     MY_QUEUE("myQueue")
     ;
@@ -7,10 +10,6 @@ public enum QueueName {
 
     QueueName(String name) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
 }
