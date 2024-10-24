@@ -8,6 +8,16 @@ import io.netty.handler.codec.http.HttpVersion;
 import io.netty.util.CharsetUtil;
 
 public class PaymentHttpResponse {
+    public static FullHttpResponse responseSuccess(String jsonResponse){
+        FullHttpResponse response = new DefaultFullHttpResponse(
+                HttpVersion.HTTP_1_1,
+                HttpResponseStatus.OK,
+                Unpooled.copiedBuffer(jsonResponse, CharsetUtil.UTF_8));
+        response.headers().set("Content-Type", "application/json");
+        response.headers().set("Content-Length", response.content().readableBytes());
+        return response;
+    }
+
     public static FullHttpResponse errorResponseSuccess(String jsonResponse){
         FullHttpResponse response = new DefaultFullHttpResponse(
                 HttpVersion.HTTP_1_1,

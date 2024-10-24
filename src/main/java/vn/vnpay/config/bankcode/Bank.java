@@ -1,5 +1,10 @@
 package vn.vnpay.config.bankcode;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Bank {
     private String bankCode;
     private String privateKey;
@@ -10,19 +15,4 @@ public class Bank {
         this.privateKey = privateKey;
     }
 
-    public String getBankCode() {
-        return bankCode;
-    }
-
-    public void setBankCode(String bankCode) {
-        this.bankCode = bankCode;
-    }
-
-    public String getPrivateKey() {
-        return privateKey;
-    }
-
-    public void setPrivateKey(String privateKey) {
-        this.privateKey = privateKey;
-    }
 }

@@ -1,4 +1,8 @@
 package vn.vnpay.enums;
+
+import lombok.Getter;
+
+@Getter
 public enum ExchangeName {
     MY_EXCHANGE("myExchange")
     ;
@@ -8,7 +12,4 @@ public enum ExchangeName {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
 }

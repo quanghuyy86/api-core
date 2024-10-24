@@ -1,5 +1,8 @@
 package vn.vnpay.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum Route {
     TOKEN_KEY("/payment/token-key", "create tokenLey"),
     CREATE_PAYMENT("/payment", "create payment"),
@@ -11,11 +14,4 @@ public enum Route {
         this.message = message;
     }
 
-    public String getPath() {
-        return path;
-    }
-
-    public String getMessage() {
-        return message;
-    }
 }

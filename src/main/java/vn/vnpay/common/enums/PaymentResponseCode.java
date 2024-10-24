@@ -1,5 +1,8 @@
 package vn.vnpay.common.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum PaymentResponseCode {
     SUCCESS("00", "Success"),
     FIELD_ERROR("01", "Field error"),
@@ -14,11 +17,4 @@ public enum PaymentResponseCode {
         this.message = message;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
 }

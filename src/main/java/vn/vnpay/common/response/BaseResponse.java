@@ -1,7 +1,10 @@
 package vn.vnpay.common.response;
 
+import lombok.Getter;
+import lombok.Setter;
 import vn.vnpay.common.enums.PaymentResponseCode;
-
+@Getter
+@Setter
 public class BaseResponse<T> {
     private String code;
     private String message;
@@ -33,27 +36,5 @@ public class BaseResponse<T> {
         this.data = data;
     }
 
-    public String getCode() {
-        return code;
-    }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 }
