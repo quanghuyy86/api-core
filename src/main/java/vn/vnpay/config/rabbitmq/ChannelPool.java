@@ -1,73 +1,85 @@
 package vn.vnpay.config.rabbitmq;
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import io.netty.channel.ChannelException;
 import lombok.extern.slf4j.Slf4j;
-import vn.vnpay.enums.RabbitMQ;
+import org.apache.commons.pool2.impl.GenericObjectPool;
+import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
+import java.util.NoSuchElementException;
+
 @Slf4j
-public class ChannelPool {
-    private static ChannelPool instance;
-    private final Connection connection;
-    private final BlockingQueue<Channel> pool;
+public class ChannelPool implements Cloneable {
+    private GenericObjectPool<Channel> internalPool;
+    public static GenericObjectPoolConfig<Channel> defaultConfig;
 
-    public ChannelPool() throws Exception {
-        //cấu hình kết nối
-        ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost(RabbitMQ.HOST.getStringValue());
-        connectionFactory.setPort(RabbitMQ.PORT.getIntValue());
-        connectionFactory.setUsername(RabbitMQ.USER_NAME.getStringValue());
-        connectionFactory.setPassword(RabbitMQ.PASSWORD.getStringValue());
-
-        this.connection = connectionFactory.newConnection();
-        // Log địa chỉ IP của kết nối
-        log.info("Connection established to RabbitMQ at: {}", connection.getAddress());
-
-        //tạo pool với kích thước = poolSize
-        this.pool = new LinkedBlockingDeque<>(RabbitMQ.POOL_SIZE.getIntValue());
-
-        // Khởi tạo các Channel và lưu vào pool
-        for (int i = 0; i < RabbitMQ.POOL_SIZE.getIntValue(); i++) {
-            Channel channel = connection.createChannel();
-            pool.offer(channel); // Thêm Channel vào pool
-        }
+    static {
+        defaultConfig = new GenericObjectPoolConfig<>();
+        defaultConfig.setMaxTotal(10);
+        defaultConfig.setMaxIdle(10);
+        defaultConfig.setMinIdle(5);
+        defaultConfig.setBlockWhenExhausted(true); // Chặn khi không còn kênh
+        log.info("Pool Config: Max Total = {}, Max Idle = {}, Min Idle = {}, Block When Exhausted = {}",
+                defaultConfig.getMaxTotal(), defaultConfig.getMaxIdle(), defaultConfig.getMinIdle(),
+                defaultConfig.getBlockWhenExhausted());
     }
 
-    public static synchronized ChannelPool getInstance() throws Exception {
-        if (instance == null) {
-            instance = new ChannelPool();
-        }
-        return instance;
+    public ChannelPool() {
+        this(defaultConfig, new ChannelFactory());
     }
 
-    // Lấy Channel từ pool
-    public Channel borrowChannel() throws InterruptedException {
-        try {
-            return pool.take(); // Lấy một Channel ra từ pool
-        } catch (IllegalAccessError e) {
-            throw new RuntimeException("Error borrowing channel from pool: " + e.getMessage());
-        }
-    }
-
-    // Trả lại Channel vào pool
-    public void returnChannel(Channel channel) {
-        if (channel != null) {
+    public ChannelPool(final GenericObjectPoolConfig<Channel> poolConfig, ChannelFactory factory) {
+        if (this.internalPool != null) {
             try {
-                pool.offer(channel); // Trả lại Channel vào pool để tái sử dụng
+                closeInternalPool();
             } catch (Exception e) {
-                throw new RuntimeException("Error returning channel to pool: " + e.getMessage());
+                log.info("Error while closing internal pool: {}", e.getMessage());
             }
         }
+
+        this.internalPool = new GenericObjectPool<Channel>(factory, poolConfig);
     }
 
-    // Đóng toàn bộ các Channel và kết nối
-    public void close() throws Exception {
-        for (Channel channel : pool) {
-            channel.close(); // Đóng từng Channel
+    private void closeInternalPool() {
+        try {
+            internalPool.close();
+        } catch (Exception e) {
+            throw new ChannelException("Could not destroy the pool", e);
         }
-        connection.close(); // Đóng kết nối đến RabbitMQ
+    }
+
+    public void returnChannel(Channel channel) {
+        try {
+            if (channel.isOpen()) {
+                internalPool.returnObject(channel);
+            } else {
+                internalPool.invalidateObject(channel);
+            }
+        } catch (Exception e) {
+            throw new ChannelException("Could not return the resource to the pool", e);
+        }
+    }
+
+    public Channel getChannel() {
+        try {
+            return internalPool.borrowObject();
+        } catch (NoSuchElementException nse) {
+            if (null == nse.getCause()) { // The exception was caused by an exhausted pool
+                throw new ChannelException("Could not get a resource since the pool is exhausted", nse);
+            }
+            // Otherwise, the exception was caused by the implemented activateObject() or ValidateObject()
+            throw new ChannelException("Could not get a resource from the pool", nse);
+        } catch (Exception e) {
+            throw new ChannelException("Could not get a resource from the pool", e);
+        }
+    }
+
+    @Override
+    public ChannelPool clone() {
+        try {
+            return (ChannelPool) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }

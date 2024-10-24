@@ -87,3 +87,654 @@
 2024-10-24 11:18:11,772 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
 2024-10-24 11:18:11,780 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
 2024-10-24 11:18:12,072 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Server started on port 8080 
+2024-10-24 13:44:34,677 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 13:44:34,788 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 13:44:34,789 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 13:49:54,714 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 13:49:54,862 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 13:49:54,863 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 13:50:25,720 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 13:50:25,811 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 13:50:25,812 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 13:50:25,896 ay.config.rabbitmq.ChannelPool -               <init>:27   - INFO  - [] - Connection established to RabbitMQ at: /127.0.0.1
+2024-10-24 13:50:25,969 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 13:50:25,994 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 13:50:26,312 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 15784 on port 8080
+2024-10-24 14:58:25,701 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 14:58:25,812 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 14:58:25,813 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 14:58:25,990 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 14:58:25,998 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 14:58:26,300 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 6132 on port 8080
+2024-10-24 15:02:57,423 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:02:57,510 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:02:57,511 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:02:57,521 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:02:57,650 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:02:57,669 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:02:57,675 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:02:57,941 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 10784 on port 8080
+2024-10-24 15:15:25,930 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:15:26,012 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:15:26,014 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:15:26,015 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:15:26,101 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:15:26,103 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:15:26,111 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:15:26,383 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 13088 on port 8080
+2024-10-24 15:43:47,918 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:43:48,001 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:43:48,002 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:43:48,004 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:43:48,087 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:43:48,103 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:43:48,110 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:43:48,370 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 8868 on port 8080
+2024-10-24 15:44:29,168 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:44:29,169 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:44:29,177 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy5",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:44:29,184 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-24 15:44:29,200 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 69d46ca4b31f0550e27371db425940136d6343cfcb9670d5d7a6029093e8fd2b
+2024-10-24 15:44:34,306 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:44:34,306 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:44:34,307 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy6",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:44:34,317 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:44:34,318 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 62ad42fce3f29ea4ba8c7d9a9ff4f9b1fdd1bc96685df0c0043427f8229d6488
+2024-10-24 15:45:04,721 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:45:04,827 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:45:04,828 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:45:04,829 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:45:04,916 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:45:04,919 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:45:04,926 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:45:05,248 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 12088 on port 8080
+2024-10-24 15:45:29,394 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:45:29,395 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:45:34,790 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy7",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:45:44,115 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:45:44,146 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 271610f985df0ccfbc9a769f51e4d0b85857f0ab0e6ed6c75d54bda1ed5f843c
+2024-10-24 15:46:12,990 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:46:12,990 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:46:17,459 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy8",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:46:21,258 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:46:21,259 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 2e2fa07adceb88d4e847c6d74c6c65ac34147f0d0662317e805a26b07d6fa3f6
+2024-10-24 15:47:41,805 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:47:41,926 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:47:41,927 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:47:41,929 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:47:42,011 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:47:42,017 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:47:42,023 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:47:42,349 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 10948 on port 8080
+2024-10-24 15:47:54,759 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:47:54,760 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:47:54,769 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy9",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:47:54,835 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:47:54,842 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 3c9830dd549c90f446ec7b6c0d8079fd99b55230ff18d5272e05536ad760adf9
+2024-10-24 15:48:14,536 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:48:14,652 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:48:14,653 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:48:14,654 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:48:14,734 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:48:14,741 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:48:14,748 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:48:15,050 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 1240 on port 8080
+2024-10-24 15:48:17,916 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:48:17,917 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:48:17,927 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy9",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:48:17,990 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-24 15:48:18,002 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 737e6e42d10d1bb37a438fcc46254229e42367c554cbea4df7734eb4b1f6bacb
+2024-10-24 15:48:22,389 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:48:22,390 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:48:22,390 ervice.impl.PaymentServiceImpl -        createPayment:78   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy10",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:48:30,235 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:48:30,237 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: c92cc8e67defd54d9cf9258f4d682c30ecdf3746c818a7812525d770e3471560
+2024-10-24 15:51:18,004 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:51:18,153 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:51:18,154 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:51:18,155 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:51:18,255 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:51:18,281 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:51:18,289 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:51:18,608 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 12168 on port 8080
+2024-10-24 15:51:22,134 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:51:22,134 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:51:22,143 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy10",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:51:22,200 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-24 15:51:22,211 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 62445b9bf45e71e07cad1a7f1bd750c83c2c2744ad926e587f4f62d3b063a093
+2024-10-24 15:51:29,098 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:51:29,098 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:51:29,099 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy11",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:51:33,398 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Failed making field 'java.lang.Throwable#detailMessage' accessible; either increase its visibility or write a custom TypeAdapter for its declaring type.
+2024-10-24 15:51:33,400 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: b4f160c33d56b6e7c1042c5483d1432c8fe11bcfd1cc86010523bba4a1670e5d
+2024-10-24 15:52:33,561 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:52:33,655 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:52:33,656 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:52:33,657 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:52:33,778 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:52:33,800 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:52:33,807 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:52:34,083 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 5904 on port 8080
+2024-10-24 15:55:26,748 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:55:26,848 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:55:26,849 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:55:26,850 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:55:26,974 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:55:26,999 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:55:27,007 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:55:27,308 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 20848 on port 8080
+2024-10-24 15:55:31,472 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:55:31,473 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:55:31,481 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy11",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:55:31,535 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-24 15:55:31,544 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 47645f6e05186ba0c483ea5d5171405d4db0829128ca7b9d11d7b5ee4f41990c
+2024-10-24 15:55:36,874 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:55:36,875 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:55:36,875 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy12",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:55:36,899 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response
+2024-10-24 15:55:36,899 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: b8eb96f811079130085701c30f0fe08bf6c2578097b7c7be878e4a575b8777f5
+2024-10-24 15:56:14,874 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:56:15,003 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:56:15,004 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:56:15,006 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:56:15,124 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:56:15,159 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:56:15,168 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:56:15,469 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 13036 on port 8080
+2024-10-24 15:56:21,038 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:56:21,040 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:56:21,048 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy12",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:56:21,103 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-24 15:56:21,112 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 0ff6da5fbe0e52f746deeba187c63726a39ecd69b76695ada2ec9a6f7dd1ad3a
+2024-10-24 15:56:25,962 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:56:25,963 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:56:25,963 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy13",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:56:51,550 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response
+2024-10-24 15:56:51,551 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: bcf791937429fe7adc58d0e6ddad515458fabb8c49e14a98bcf5df11d79bc79e
+2024-10-24 15:56:56,532 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 15:56:56,670 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 15:56:56,673 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 15:56:56,674 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 15:56:56,779 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 15:56:56,804 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 15:56:56,826 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 15:56:57,203 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 17828 on port 8080
+2024-10-24 15:57:03,344 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:57:03,345 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:57:03,353 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy14",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:57:08,063 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response
+2024-10-24 15:57:08,069 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 61fe298da9f64f4b54ed432337b89ade68662064a58a7c94c001ce6f21705492
+2024-10-24 15:59:33,226 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 15:59:33,226 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 15:59:33,227 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy15",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 15:59:53,808 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response
+2024-10-24 15:59:53,811 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 841937a54f35d172b1a1eca09c4bee06bec1ee670808e6877b5df8e01f922f3a
+2024-10-24 16:12:11,590 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 16:12:11,688 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 16:12:11,690 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 16:12:11,691 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 16:12:11,799 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 16:12:11,826 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 16:12:11,834 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 16:12:12,132 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 10716 on port 8080
+2024-10-24 16:12:18,584 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 16:12:18,585 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 16:12:18,593 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy16",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 16:12:18,664 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response
+2024-10-24 16:12:18,675 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 814688e56727803919544192856e80b98014d14d4834c928005ad16a857d321d
+2024-10-24 16:13:34,011 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 16:13:34,130 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 16:13:34,131 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 16:13:34,132 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 16:13:34,226 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 16:13:34,277 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 16:13:34,286 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 16:13:34,586 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 21068 on port 8080
+2024-10-24 16:13:40,806 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 16:13:40,806 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 16:13:40,814 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy17",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 16:13:40,897 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response: null
+2024-10-24 16:13:40,904 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: e986ee9f37e227e2a09ecfcdf3624d907cf71cdcb679e7b29a8e0a07e4f7c47e
+2024-10-24 16:14:17,414 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 16:14:17,535 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 16:14:17,537 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 16:14:17,539 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 16:14:17,650 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 16:14:17,676 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 16:14:17,683 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 16:14:17,979 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 8564 on port 8080
+2024-10-24 16:14:27,791 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-24 16:14:27,792 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-24 16:14:27,800 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy18",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-24 16:16:33,871 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message and wait for response: null
+2024-10-24 16:16:33,880 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 02eea863906d237a6c5f84bc765757dd9fc5f54bcc66b62e38043f9cd2807a03
+2024-10-24 16:22:26,530 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 16:22:26,623 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 16:22:26,624 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 16:22:26,625 ay.config.rabbitmq.ChannelPool -             <clinit>:20   - INFO  - [] - Pool Config: Max Total = 10, Block When Exhausted = false
+2024-10-24 16:22:26,749 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 16:22:26,774 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 16:22:26,780 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 16:22:27,052 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 14744 on port 8080
+2024-10-24 16:37:57,417 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-24 16:37:57,499 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-24 16:37:57,500 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-24 16:37:57,511 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = true
+2024-10-24 16:37:57,613 config.rabbitmq.ChannelFactory -               <init>:30   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-24 16:37:57,636 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-24 16:37:57,643 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-24 16:37:57,906 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 2832 on port 8080
