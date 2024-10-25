@@ -18,7 +18,7 @@ public class ChannelPool implements Cloneable {
         defaultConfig.setMaxTotal(10);
         defaultConfig.setMaxIdle(10);
         defaultConfig.setMinIdle(5);
-        defaultConfig.setBlockWhenExhausted(true); // Chặn khi không còn kênh
+        defaultConfig.setBlockWhenExhausted(false); // Chặn khi không còn kênh
         log.info("Pool Config: Max Total = {}, Max Idle = {}, Min Idle = {}, Block When Exhausted = {}",
                 defaultConfig.getMaxTotal(), defaultConfig.getMaxIdle(), defaultConfig.getMinIdle(),
                 defaultConfig.getBlockWhenExhausted());

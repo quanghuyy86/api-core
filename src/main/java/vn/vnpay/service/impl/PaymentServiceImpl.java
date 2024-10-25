@@ -1,5 +1,6 @@
 package vn.vnpay.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -16,6 +17,7 @@ import vn.vnpay.common.response.PaymentHttpResponse;
 import vn.vnpay.common.response.PaymentResponse;
 import vn.vnpay.config.bankcode.XmlBankValidator;
 import vn.vnpay.dto.payment.request.PaymentRequestDTO;
+import vn.vnpay.dto.payment.response.ConsumerResponse;
 import vn.vnpay.enums.MessageType;
 import vn.vnpay.enums.QueueName;
 import vn.vnpay.service.PaymentService;
@@ -38,15 +40,19 @@ public class PaymentServiceImpl implements PaymentService {
     private final RabbitMQService rabbitMQService;
     private final XmlBankValidator xmlBankValidator;
     private final Gson gson;
+    private final ObjectMapper objectMapper;
+
     private static final String PHONE_REGEX = "^(03|05|07|08|09)[0-9]{8}$";
 
     public PaymentServiceImpl(RedisService redisService, GlobalExceptionHandler exceptionHandler,
-                              RabbitMQService rabbitMQService, XmlBankValidator xmlBankValidator, Gson gson) {
+                              RabbitMQService rabbitMQService, XmlBankValidator xmlBankValidator,
+                              Gson gson, ObjectMapper objectMapper) {
         this.redisService = redisService;
         this.exceptionHandler = exceptionHandler;
         this.rabbitMQService = rabbitMQService;
         this.xmlBankValidator = xmlBankValidator;
         this.gson = gson;
+        this.objectMapper = objectMapper;
     }
 
     @Override
@@ -80,7 +86,7 @@ public class PaymentServiceImpl implements PaymentService {
             validateRequest(paymentRequest);
 
             //push data to rabbitMQ
-            String responseMessage = rabbitMQService.sendMessageAndWaitForResponse(QueueName.MY_QUEUE.getName(), gson.toJson(paymentRequest));
+            sendDataToRabbitMQAndReply(paymentRequest);
 
             ctx.writeAndFlush(PaymentHttpResponse
                             .responseSuccess(gson.toJson(PaymentResponse.success(paymentRequest.getPrivateKey(), paymentRequest.getAddValue()))))
@@ -182,6 +188,22 @@ public class PaymentServiceImpl implements PaymentService {
         }
         if (request.getAddValue().getPayMethodMMS() == null) {
             throw new PaymentException("payMethodMMS không được trống");
+        }
+    }
+
+    private void sendDataToRabbitMQAndReply(PaymentRequestDTO message) {
+        try {
+            rabbitMQService.sendMessage(QueueName.SEND_QUEUE.getName(), message);
+            String messageValue = rabbitMQService.receiveMessages(QueueName.REPLY_QUEUE.getName());
+            ConsumerResponse consumerResponse = objectMapper.readValue(messageValue, ConsumerResponse.class);
+            if (consumerResponse == null){
+                throw new PaymentException("Not found consumer");
+            }
+            if (PaymentResponseCode.UNKNOWN_ERROR.getCode().equals(consumerResponse.getCode())){
+                throw new PaymentException("Cannot save data to database");
+            }
+        } catch (Exception e){
+            e.getMessage();
         }
     }
 
