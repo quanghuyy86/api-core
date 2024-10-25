@@ -1,0 +1,1590 @@
+2024-10-25 10:00:11,376 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 10:00:11,474 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 10:00:11,476 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 10:00:11,493 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 10:00:31,670 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 10:00:31,752 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 10:00:31,753 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 10:00:31,754 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 10:00:31,845 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 10:00:31,911 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 10:00:31,925 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 10:00:32,281 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 12672 on port 8080
+2024-10-25 10:06:38,993 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 10:06:39,072 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 10:06:39,073 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 10:06:39,083 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 10:06:39,162 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 10:06:39,187 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 10:06:39,194 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 10:06:39,442 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 8152 on port 8080
+2024-10-25 10:51:54,163 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 10:51:54,242 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 10:51:54,243 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 10:51:54,254 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 10:51:54,333 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 10:51:54,345 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 10:51:54,352 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 10:51:54,613 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 2960 on port 8080
+2024-10-25 10:52:11,139 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 10:52:11,140 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 10:52:11,148 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy24",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 10:52:11,221 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy24",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 10:52:11,236 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: bcf003405339e23bd047ea382c03a5f7035accb2a5d29c38347241656f6df250
+2024-10-25 11:21:14,483 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 11:21:14,565 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 11:21:14,565 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 11:21:14,567 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 11:21:14,660 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 11:21:14,663 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 11:21:14,673 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 11:21:14,945 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 14060 on port 8080
+2024-10-25 11:21:22,930 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:21:22,931 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:21:22,939 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy01",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:21:23,006 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy01",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:21:23,013 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 0e307dda64ebbc8fb17658dc4f555a0599a0e9590e63901cd3f4b3608ca6f938
+2024-10-25 11:21:46,131 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:21:46,131 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:21:46,132 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy02",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:21:46,137 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy02",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:21:46,137 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 46f399fb138e254a91251eb3274f27c626d786b5a6abb72cfdb0745a54d4b38b
+2024-10-25 11:23:09,886 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:23:09,887 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:23:09,887 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy03",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:23:09,892 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy03",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:23:09,892 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 580a5c5e680cc943dfdd971c7574f6140c0649a1ff2eae8f08cd4945162bbf81
+2024-10-25 11:24:54,330 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:24:54,331 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:24:54,332 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy04",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:24:54,336 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy04",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:24:54,337 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 0e1de633f15a93d350208c710ba8f67bfe09ace5e7d767616478a06c083c5e58
+2024-10-25 11:33:19,584 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 11:33:19,673 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 11:33:19,674 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 11:33:19,676 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 11:33:19,773 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 11:33:19,775 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 11:33:19,783 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 11:33:20,089 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 18712 on port 8080
+2024-10-25 11:33:26,332 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:33:26,332 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:33:26,342 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy05",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:33:26,410 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy05",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:33:26,417 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1cae888cb31bd49b2b138803166527980cc32425d3cbaf69e6ea77c6fd6db74b
+2024-10-25 11:34:10,412 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:34:10,412 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:34:10,412 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy06",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:34:10,417 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy06",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:34:10,418 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 88f887969a502d440932252dada3d0a2ba68d71c550a37e0c5b257f77ccdb937
+2024-10-25 11:35:56,500 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 11:35:56,501 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 11:35:56,501 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy07",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 11:35:56,506 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy07",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 11:35:56,507 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1f139e799641441f15aea83aecb4741b5f8f4563bb6e2c357d4b831588d8aa8d
+2024-10-25 13:59:51,664 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 13:59:51,774 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 13:59:51,775 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 13:59:51,776 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 13:59:51,874 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 13:59:51,877 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 13:59:51,903 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 13:59:52,184 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 5424 on port 8080
+2024-10-25 14:11:39,851 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:11:39,946 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:11:39,947 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:11:39,951 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:11:40,040 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:11:40,046 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:11:40,059 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:11:40,342 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 17116 on port 8080
+2024-10-25 14:11:52,615 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:11:52,616 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:11:52,644 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy08",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:11:52,733 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy08",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:11:52,764 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: f0d2598b7be218b375861afa10a68d99e4598e09a1b42ab0b35ecbbdb56b21a5
+2024-10-25 14:12:33,893 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:12:33,893 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:12:33,894 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy09",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:12:33,899 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy09",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:12:33,900 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 2cb09831675ba44b2e1e2995d585348ea945133ee013144656753ef82695de58
+2024-10-25 14:13:45,937 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:13:45,938 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:13:45,938 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy10",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:13:45,942 ception.GlobalExceptionHandler - ndleGenericException:53   - ERROR - [] - Unexpected Error: Could not send message
+2024-10-25 14:13:45,943 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: bd70bb2da18254fd0fe4e576ada19c70974241e7ef99dde24322654e1007924c
+2024-10-25 14:14:00,884 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:14:00,964 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:14:00,965 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:14:00,966 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:14:25,129 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:14:25,212 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:14:25,213 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:14:25,214 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:14:25,293 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:14:25,296 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:14:25,304 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:14:25,565 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 5000 on port 8080
+2024-10-25 14:14:37,560 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:14:37,561 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:14:37,569 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy11",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:14:37,644 .vnpay.service.RabbitMQService -          sendMessage:43   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy11",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:14:37,654 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 01440fe580bfc0f1ebf66ffc8f184ae12a38ab5be825d52ebdc2aa6b524e0bae
+2024-10-25 14:25:56,758 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:25:56,836 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:25:56,837 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:25:56,838 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:25:56,926 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:25:56,941 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:25:56,947 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:25:57,184 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 14020 on port 8080
+2024-10-25 14:28:13,677 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:28:13,753 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:28:13,754 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:28:13,755 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:28:13,835 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:28:13,839 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:28:13,846 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:28:14,095 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 18936 on port 8080
+2024-10-25 14:28:19,303 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:28:19,305 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:28:19,312 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy12",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:28:19,377 .vnpay.service.RabbitMQService -          sendMessage:46   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy12",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:28:19,383 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 85272d1055b14305b96510e910c9a1f5b3517a1e17ede263950a5f36d9dfd7c9
+2024-10-25 14:37:33,979 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:37:34,059 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:37:34,060 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:37:34,061 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:37:34,151 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:37:34,156 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:37:34,162 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:37:34,411 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 1368 on port 8080
+2024-10-25 14:37:45,052 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:37:45,053 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:37:45,060 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy13",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:37:45,125 .vnpay.service.RabbitMQService -          sendMessage:46   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy13",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:37:45,131 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: d25898bcb008e970a36420c91b5162bae857fd281a55e858636fff5daa581da0
+2024-10-25 14:50:04,689 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:50:04,765 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:50:04,766 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:50:04,767 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:50:04,851 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:50:04,855 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:50:04,865 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:50:05,152 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 6488 on port 8080
+2024-10-25 14:50:12,831 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:50:12,832 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:50:12,840 ervice.impl.PaymentServiceImpl -        createPayment:77   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy14",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:50:12,903 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: cd929867137a5fefbc3f04528aaf44c20ff14a7f92893adf89b0c32f922523c8
+2024-10-25 14:51:55,271 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:51:55,345 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:51:55,346 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:51:55,347 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:51:55,439 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:51:55,443 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:51:55,454 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:51:55,722 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 9516 on port 8080
+2024-10-25 14:52:01,642 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:52:01,643 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:52:01,651 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy15",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:52:01,714 .vnpay.service.RabbitMQService -          sendMessage:40   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy15",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:52:01,720 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1863c666e5be1be84ca6c9b2afa37ca3057577c1f5b19a4cb0e50f9f93d3ae0d
+2024-10-25 14:53:09,777 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 14:53:09,856 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 14:53:09,856 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 14:53:09,858 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 14:53:09,957 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 14:53:09,962 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 14:53:09,970 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 14:53:10,215 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 12300 on port 8080
+2024-10-25 14:53:18,844 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:53:18,846 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:53:18,855 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy15",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:53:18,907 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-25 14:53:18,917 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: e516fa53272c40490ae18f68e88a1494cb3c37455b0d90b224d9a7f1fce1ff3c
+2024-10-25 14:53:24,010 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 14:53:24,011 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 14:53:24,011 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy16",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 14:53:24,026 .vnpay.service.RabbitMQService -          sendMessage:40   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy16",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 14:53:24,027 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 26988a7a27582aa2ed4785a8ac708860caaa14cb30b83fa4fb8cb0bc1266851b
+2024-10-25 15:43:41,670 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 15:43:41,768 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 15:43:41,770 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 15:43:41,771 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 15:43:41,846 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 15:43:41,860 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 15:43:41,867 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 15:43:42,186 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 21652 on port 8080
+2024-10-25 15:43:47,463 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 15:43:47,464 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 15:43:47,473 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy17",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 15:44:24,035 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 15:44:24,136 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 15:44:24,136 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 15:44:24,138 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 15:44:24,208 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 15:44:24,211 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 15:44:24,217 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 15:44:24,494 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 17220 on port 8080
+2024-10-25 15:44:27,655 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 15:44:27,656 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 15:44:27,664 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy18",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 16:11:45,467 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 16:11:45,566 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 16:11:45,567 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 16:11:45,569 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 16:11:45,651 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 16:11:45,656 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 16:11:45,662 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 16:11:45,932 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 18692 on port 8080
+2024-10-25 16:12:04,359 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 16:12:04,360 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 16:12:04,367 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy19",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 16:12:51,885 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 16:12:51,990 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 16:12:51,991 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 16:12:51,992 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 16:12:52,065 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 16:12:52,070 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 16:12:52,077 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 16:12:52,359 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 16692 on port 8080
+2024-10-25 16:13:09,734 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 16:13:09,735 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 16:13:09,743 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy20",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:01:28,195 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:01:28,273 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:01:28,274 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:01:28,275 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:01:28,356 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:01:28,359 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:01:28,368 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:01:28,650 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 19380 on port 8080
+2024-10-25 17:02:17,881 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:02:17,881 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:02:17,889 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy21",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:02:17,906 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 9356bc4b2f430e80145e96615fb817b0e138a702733f570fad5336bf18b13805
+2024-10-25 17:02:46,983 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:02:46,984 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:02:46,985 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy22",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:02:46,987 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: d42885029d32f12349ed29b4e4d39a6574648abc11830c13932715ce5ab86fad
+2024-10-25 17:04:12,004 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:04:12,083 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:04:12,084 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:04:12,094 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:04:12,184 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:04:12,187 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:04:12,204 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:04:12,491 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 21932 on port 8080
+2024-10-25 17:04:13,495 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:04:13,574 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:04:13,575 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:04:13,576 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:04:13,658 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:04:13,662 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:04:13,669 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:04:20,902 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:04:20,974 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:04:20,974 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:04:20,976 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:04:21,058 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:04:21,061 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:04:21,070 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:04:21,327 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 1868 on port 8080
+2024-10-25 17:04:27,737 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:04:27,738 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:04:27,747 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy23",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:04:27,813 .vnpay.service.RabbitMQService -          sendMessage:40   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy23",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: replyQueue
+2024-10-25 17:04:27,827 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 17d8173d63994447c9e31dcbc3b12c9cc48c384221e174092e7858919bded4c8
+2024-10-25 17:05:06,769 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:05:06,848 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:05:06,849 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:05:06,850 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:05:06,934 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:05:06,937 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:05:06,947 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:05:07,217 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 10428 on port 8080
+2024-10-25 17:05:13,592 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:05:13,592 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:05:13,599 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy24",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:05:13,649 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-25 17:05:13,657 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 1c83b28d33e7be32520a39227079c057c2e36892bebac398f9cbbb89c93ca446
+2024-10-25 17:05:18,478 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:05:18,479 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:05:18,479 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy25",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:05:18,496 .vnpay.service.RabbitMQService -          sendMessage:40   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy25",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 17:05:18,497 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 8a3c34418f46b123951abda8332718e63d1c3761b1543454bf88f84a116f8c84
+2024-10-25 17:11:39,240 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:11:39,315 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:11:39,316 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:11:39,317 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:11:39,405 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:11:39,420 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:11:39,427 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:11:39,683 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 10408 on port 8080
+2024-10-25 17:11:45,669 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:11:45,669 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:11:45,682 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy26",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:11:45,745 .vnpay.service.RabbitMQService -          sendMessage:41   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy26",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 17:24:25,960 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:24:26,072 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:24:26,073 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:24:26,075 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:24:26,148 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:24:26,150 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:24:26,157 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:24:26,441 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 11596 on port 8080
+2024-10-25 17:24:59,834 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:24:59,836 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:25:06,759 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy27",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:25:09,406 .vnpay.service.RabbitMQService -          sendMessage:41   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy27",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 17:25:26,489 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: fc1ccc0504691f24f13f314136f471a15df2453de6a608defafe4df799420fb2
+2024-10-25 17:29:40,512 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 17:29:40,589 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 17:29:40,590 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 17:29:40,592 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 17:29:40,671 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 17:29:40,675 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 17:29:40,683 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 17:29:40,935 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 15972 on port 8080
+2024-10-25 17:29:54,774 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 17:29:54,775 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 17:29:54,783 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy28",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 17:29:54,851 .vnpay.service.RabbitMQService -          sendMessage:41   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy28",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} tới Exchange: myExchange và có RoutingKey: myRoutingKey
+2024-10-25 17:29:54,866 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: ab463a0ef359f59eb9b76456da14d94b1600af547b509a086dfdf6977f2bc7b9
+2024-10-25 23:59:42,512 vnpay.config.redis.RedisConfig -               <init>:15   - INFO  - [] - Initializing Redis configuration...
+2024-10-25 23:59:42,595 vnpay.config.redis.RedisConfig -               <init>:23   - INFO  - [] - JedisPool initialized successfully with maxTotal=128, maxIdle=64, minIdle=16.
+2024-10-25 23:59:42,596 vnpay.config.redis.RedisConfig -         getJedisPool:27   - INFO  - [] - Getting JedisPool...
+2024-10-25 23:59:42,597 ay.config.rabbitmq.ChannelPool -             <clinit>:22   - INFO  - [] - Pool Config: Max Total = 10, Max Idle = 10, Min Idle = 5, Block When Exhausted = false
+2024-10-25 23:59:42,684 config.rabbitmq.ChannelFactory -               <init>:29   - INFO  - [] - Connecting to RabbitMQ at 127.0.0.1:5672 success.
+2024-10-25 23:59:42,687 nfig.bankcode.XmlBankValidator -         loadBankList:26   - INFO  - [] - Starting to load bank list from XML file.
+2024-10-25 23:59:42,701 nfig.bankcode.XmlBankValidator -         loadBankList:45   - INFO  - [] - Successfully loaded 5 banks.
+2024-10-25 23:59:42,982 vn.vnpay.netty.NettyServer     -                start:46   - INFO  - [] - Starting NettyServer using Java 17.0.8.1 with PID 6772 on port 8080
+2024-10-25 23:59:46,106 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 23:59:46,107 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 23:59:46,115 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy28",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 23:59:46,180 ception.GlobalExceptionHandler - ndlePaymentException:31   - INFO  - [] - tokenKey đã trùng lặp trong ngày
+2024-10-25 23:59:46,188 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: d4b53023b65b624313c1df29047472da5362bf44ad86254c6debb9bfb16a218b
+2024-10-25 23:59:55,657 vn.vnpay.netty.NettyHandler    -         channelRead0:23   - INFO  - [] - Received request: POST /payment
+2024-10-25 23:59:55,658 .requesthandler.PaymentHandler -               accept:21   - INFO  - [] - Processing payment request
+2024-10-25 23:59:55,658 ervice.impl.PaymentServiceImpl -        createPayment:79   - INFO  - [] - Begin create payment: {
+  "tokenKey": "taquanghuy29",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+}
+2024-10-25 23:59:55,675 .vnpay.service.RabbitMQService -          sendMessage:67   - INFO  - [] - Đã gửi message: {
+  "tokenKey": "taquanghuy29",
+  "apiId": "akhsdgbkahjs",
+  "mobile": "0323456789",
+  "bankCode": "01101014",
+  "privateKey": "09742344",
+  "accountNo": "123456789",
+  "payDate": "20241009123045",
+  "additionalData": "Some additional data",
+  "debitAmount": 1000000.50,
+  "respCode": "00",
+  "respDesc": "Transaction Successful",
+  "traceTransfer": "1234567890",
+  "messageType": "1",
+  "checkSum": "abcdef123456",
+  "oderCode": "ORD001",
+  "userName": "john_doe",
+  "realAmount": 950000.75,
+  "promotionCode": "PROMO2024",
+  "addValue": {
+    "payMethod": "01",
+    "payMethodMMS": 1
+  }
+} trực tiếp tới queue name: sendQueue.
+2024-10-25 23:59:55,676 vnpay.common.util.CheckSumUtil -    calculateCheckSum:25   - INFO  - [] - Checksum: 5fff170270e27126eac6c160db1d4026b31c3b6b53c248edc1cb2ec5e1283a96

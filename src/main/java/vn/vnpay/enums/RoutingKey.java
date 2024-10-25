@@ -3,14 +3,12 @@ package vn.vnpay.enums;
 import lombok.Getter;
 
 @Getter
-public enum QueueName {
-    SEND_QUEUE("sendQueue"),
-    REPLY_QUEUE("replyQueue")
+public enum RoutingKey {
+    MY_ROUTING_KEY("myRoutingKey")
     ;
     private final String name;
 
-    QueueName(String name) {
+    RoutingKey(String name) {
         this.name = name;
     }
-
 }
