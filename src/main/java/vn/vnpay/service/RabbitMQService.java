@@ -10,6 +10,7 @@ import vn.vnpay.config.rabbitmq.ChannelPool;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
@@ -150,6 +151,99 @@ public class RabbitMQService {
             }
         }
     }
+
+    public String sendMessageAndAwaitResponse(String queueName, Object message) {
+        Channel channel = null;
+        String responseQueueName = "responseQueue_" + UUID.randomUUID(); // Tạo queue phản hồi duy nhất
+        CompletableFuture<String> responseFuture = new CompletableFuture<>();
+
+        try {
+            channel = channelPool.getChannel();
+
+            // Khai báo queue (không gây lỗi nếu queue đã tồn tại)
+            channel.queueDeclare(queueName, true, false, false, null);
+            channel.queueDeclare(responseQueueName, true, false, false, null);
+
+            String sendMessage = gson.toJson(message);
+            AMQP.BasicProperties properties = new AMQP.BasicProperties.Builder()
+                    .contentType("application/json")
+                    .deliveryMode(2) // độ bền của message (1 = không bền, 2 = bền)
+                    .replyTo(responseQueueName) // Đặt queue để nhận phản hồi
+                    .correlationId(UUID.randomUUID().toString()) // Thêm ID duy nhất cho mỗi thông điệp
+                    .build();
+
+            channel.basicPublish("", queueName, properties, sendMessage.getBytes(StandardCharsets.UTF_8));
+            log.info("Message sent to queue {}: {} ", queueName, sendMessage);
+
+            // Tạo consumer cho phản hồi
+            channel.basicConsume(responseQueueName, true, (consumerTag, delivery) -> {
+                String response = new String(delivery.getBody(), StandardCharsets.UTF_8);
+                log.info("Response received: {}", response);
+                responseFuture.complete(response);
+            }, consumerTag -> {
+                System.out.println("Consumer cancelled: " + consumerTag);
+            });
+
+            // Chờ phản hồi
+            return responseFuture.get(); // Chờ cho đến khi nhận được phản hồi
+
+        } catch (IOException e) {
+            throw new ChannelException("Could not send message", e);
+        } catch (ExecutionException | InterruptedException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (channel != null) {
+                channelPool.returnChannel(channel); // Trả kênh lại cho pool
+            }
+        }
+    }
+
+
+    public void receiveAndRespond(String queueName) {
+        Channel channel = null;
+        try {
+            channel = channelPool.getChannel();
+            channel.queueDeclare(queueName, true, false, false, null);
+
+            // Thiết lập callback để xử lý message khi nhận được
+            Channel finalChannel = channel;
+            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+                String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
+                System.out.println("Received message: " + message);
+
+                // Xử lý logic của message ở đây
+                boolean success = processMessage(message); // Phương thức để xử lý message và trả về true/false
+
+                // Gửi phản hồi trở lại
+                String responseMessage = success ? "Success" : "Failure";
+                String responseQueue = delivery.getProperties().getReplyTo(); // Lấy queue để phản hồi
+
+                finalChannel.basicPublish("", responseQueue, null, responseMessage.getBytes(StandardCharsets.UTF_8));
+                System.out.println("Sent response: " + responseMessage);
+
+                // Xác nhận message đã được xử lý
+                finalChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+            };
+
+            // Bắt đầu lắng nghe message từ queue
+            channel.basicConsume(queueName, false, deliverCallback, consumerTag -> {
+                System.out.println("Consumer cancelled: " + consumerTag);
+            });
+
+        } catch (IOException e) {
+            throw new ChannelException("Could not receive message from queue", e);
+        } finally {
+            if (channel != null) {
+                channelPool.returnChannel(channel); // Trả kênh lại cho pool
+            }
+        }
+    }
+
+    private boolean processMessage(String message) {
+        return true;
+    }
+
+
 
 }
 

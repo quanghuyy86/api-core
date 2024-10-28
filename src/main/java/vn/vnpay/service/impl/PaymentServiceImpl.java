@@ -1,5 +1,6 @@
 package vn.vnpay.service.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import io.netty.channel.ChannelFutureListener;
@@ -103,109 +104,103 @@ public class PaymentServiceImpl implements PaymentService {
 
         //validate token && save token in redis
         if (StringUtils.isBlank(request.getPrivateKey())) {
-            throw new PaymentException("tokenKey không được để trống hoặc có khoảng trắng");
+            throw new PaymentException("tokenKey must not be blank or contain spaces");
         }
         if (redisService.existDataFromRedis(request.getTokenKey())) {
-            throw new PaymentException("tokenKey đã trùng lặp trong ngày");
+            throw new PaymentException("tokenKey was duplicated during the day");
         }
         redisService.saveDataToRedis(request.getTokenKey(), gson.toJson(request));
 
 
         //validate phoneNumber
         if (StringUtils.isBlank(request.getMobile())) {
-            throw new PaymentException("mobile - Số điện thoại của khách hàng không đuợc để trống.");
+            throw new PaymentException("mobile - must not be blank or contain spaces");
         }
         Pattern pattern = Pattern.compile(PHONE_REGEX);
 
         Matcher matcher = pattern.matcher(request.getMobile());
 
         if (!matcher.matches()) {
-            throw new PaymentException("mobile - Sai định dạng số điện thoại của khách hàng.");
+            throw new PaymentException("mobile - Incorrect format of the customer's phone number.");
         }
 
         //validate BankCode && PrivateKey
         if (StringUtils.isBlank(request.getBankCode())) {
-            throw new PaymentException("bankCode không được trống.");
+            throw new PaymentException("bankCode must not be blank or contain spaces");
         }
         if (StringUtils.isBlank(request.getPrivateKey())) {
-            throw new PaymentException("privateKey không được trống.");
+            throw new PaymentException("privateKey must not be blank or contain spaces");
         }
         if (!xmlBankValidator.isValidBank(request.getBankCode(), request.getPrivateKey())) {
-            throw new PaymentException("bankCode and privateKey không cùng 1 ngân hàng.");
+            throw new PaymentException("bankCode and privateKey Not the same bank.");
         }
 
         // So sánh hai giá trị debitAmount(số tiền thanh toán) và realAmount(số tiền sau khuyến mại)
         int comparisonResult = request.getDebitAmount().compareTo(request.getRealAmount());
 
         if (comparisonResult < 0) { // debitAmount nhỏ hơn realAmount
-            throw new PaymentException("Số tiền thanh toán phải hơn số tiền sau khuyến mại.");
+            throw new PaymentException("The payment amount must be more than the amount after the promotion.");
         } else if (comparisonResult == 0) { // debitAmount bằng realAmount
             if (!StringUtils.isEmpty(request.getPromotionCode())) {
-                throw new PaymentException("Mã Voucher phải bằng null hoặc rỗng khi không có khuyến mãi.");
+                throw new PaymentException("Voucher code must be null or empty when there is no promotion.");
             }
         } else { // debitAmount lớn hơn realAmount
             if (StringUtils.isEmpty(request.getPromotionCode())) {
-                throw new PaymentException("Error code 01: Không có mã voucher, mặc dù số tiền đã giảm.");
+                throw new PaymentException("There is no voucher code, even though the amount has been reduced.");
             }
         }
 
         if (StringUtils.isEmpty(request.getPayDate())) {
-            throw new PaymentException("payDate không được trống");
+            throw new PaymentException("payDate must not be blank or contain spaces");
         }
         if (!isValidPayDate(request.getPayDate())) {
-            throw new PaymentException("payDate không đúng định dạng");
+            throw new PaymentException("payDate must not be blank or contain spaces");
         }
 
         if (StringUtils.isBlank(request.getApiId())) {
-            throw new PaymentException("apiId không được trống hoặc không có khoảng trắng");
+            throw new PaymentException("apiId must not be blank or contain spaces");
         }
 
         if (StringUtils.isBlank(request.getOderCode())) {
-            throw new PaymentException("oderCode không được trống hoặc không có khoảng trắng");
+            throw new PaymentException("oderCode must not be blank or contain spaces");
         }
 
         if (StringUtils.isBlank(request.getRespCode())) {
-            throw new PaymentException("respCode không được trống hoặc không có khoảng trắng");
+            throw new PaymentException("respCode must not be blank or contain spaces");
         }
 
         if (StringUtils.isEmpty(request.getRespDesc())) {
-            throw new PaymentException("respDesc không được trống");
+            throw new PaymentException("respDesc must not be blank or contain spaces");
         }
 
         if (StringUtils.isBlank(request.getTraceTransfer())) {
-            throw new PaymentException("traceTransfer không được trống");
+            throw new PaymentException("traceTransfer must not be blank or contain spaces");
         }
 
         if (StringUtils.isEmpty(request.getMessageType())) {
-            throw new PaymentException("messageType không được trống");
+            throw new PaymentException("messageType must not be blank or contain spaces");
         }
         if (!request.getMessageType().equals(MessageType.SUCCESS.getCode())) {
-            throw new PaymentException("Giá trị của messageType không chính xác");
+            throw new PaymentException("The value of messageType is incorrect");
         }
 
         if (StringUtils.isBlank(request.getAddValue().getPayMethod())) {
-            throw new PaymentException("payMethod không được trống");
+            throw new PaymentException("payMethod must not be blank or contain spaces");
         }
         if (request.getAddValue().getPayMethodMMS() == null) {
-            throw new PaymentException("payMethodMMS không được trống");
+            throw new PaymentException("payMethodMMS must not be blank or contain spaces");
         }
     }
 
-    private void sendDataToRabbitMQAndReply(PaymentRequestDTO message) {
-        try {
-            rabbitMQService.sendMessage(QueueName.SEND_QUEUE.getName(), message);
-            String messageValue = rabbitMQService.receiveMessages(QueueName.REPLY_QUEUE.getName());
-            ConsumerResponse consumerResponse = objectMapper.readValue(messageValue, ConsumerResponse.class);
-            if (consumerResponse == null){
-                throw new PaymentException("Not found consumer");
-            }
-            if (PaymentResponseCode.UNKNOWN_ERROR.getCode().equals(consumerResponse.getCode())){
-                throw new PaymentException("Cannot save data to database");
-            }
-        } catch (Exception e){
-            e.getMessage();
+    private void sendDataToRabbitMQAndReply(PaymentRequestDTO message) throws JsonProcessingException {
+        String messageResponse = rabbitMQService.sendMessageAndAwaitResponse(QueueName.SEND_QUEUE.getName(), message);
+        ConsumerResponse consumerResponse = objectMapper.readValue(messageResponse, ConsumerResponse.class);
+        if (consumerResponse.getCode().equals(PaymentResponseCode.UNKNOWN_ERROR.getCode())) {
+            throw new RuntimeException("Unable to save data in database");
         }
+
     }
+
 
     private boolean isValidPayDate(String payDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
